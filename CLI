@@ -27,4 +27,4 @@ ctrl + k, ctrl + o -> open folder
 shift + alt + arrow down -> 
 ctrl + shift + k ->
 alt + arrow up -> moves line up
-ctrl + [
+ctrl + [ -> moves code line left for one tab, same for right
