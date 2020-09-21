@@ -54,9 +54,26 @@ table{
     color: grey;
 }
 
+#table1 tbody p+span{
+    color: violet;
+}
 
-#table1 p+span{
+#table1 p~span{
     color: black;
+}
+
+.klucitis{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color: tomato;
+    border: 2px solid red;
+    margin: 20px 30px;
+}
+
+#klucisi{
+    background-color: #777;
+    padding: 10px 40px 60px 80px;
 }
 
 /* 
