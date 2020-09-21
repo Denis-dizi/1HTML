@@ -18,3 +18,13 @@ HTTPS - HyperText Transfer Protocol Secure
 F12, Ctrl + Shift + i
 
 Emmet
+
+2020.09.18
+VSCode key bindings:
+ctrl + k -> open file
+ctrl + k, ctrl + o -> open folder
+
+shift + alt + arrow down -> 
+ctrl + shift + k ->
+alt + arrow up -> moves line up
+ctrl + [
