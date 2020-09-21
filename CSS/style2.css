@@ -4,7 +4,55 @@ body{background-color: rgb(204, 181, 226);}
 table{
     border-collapse: collapse ;
 }
-.table1, .table2 {
+/* .table1, .table2 {
     border-collapse: collapse ;
+} */
+
+.tdgreen{
+    color: blue;
 }
 
+#heading1 {
+    color: red;
+}
+#heading2 {
+    color: rgb(204, 181, 226);
+}
+#heading3 {
+    color: rgba(red, green, blue, alpha);
+}
+
+#button {
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 24px;
+    text-align: center;
+    background-color: green;
+    color: yellow;
+    border: 1px solid lightseagreen;
+    border-radius: 8px;
+    /* opacity: .5; */
+}
+
+/* 
+reset css
+user-agent
+
+Colors:
+color - for font
+background-color
+border
+box-shadow
+
+named colors: aliceblue, gray
+RGB - #ffffff; (HEX system 16)
+HEX 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F;
+16*16=256
+
+rgb(255, 255, 255)
+rgba(255, 255, 255 ,5)
+HSA
+HSL
+
+*/
