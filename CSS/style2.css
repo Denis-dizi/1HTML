@@ -50,6 +50,15 @@ table{
     background-color: magenta;
 }
 
+#table1 td+td{
+    color: grey;
+}
+
+
+#table1 p+span{
+    color: black;
+}
+
 /* 
 reset css
 user-agent
