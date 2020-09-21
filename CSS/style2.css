@@ -35,6 +35,21 @@ table{
     /* opacity: .5; */
 }
 
+#table1{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* #table1>td */
+#table1 td{
+    text-align: center;
+}
+
+/* #table1>tbody */
+#table1 tbody tr:nth-child(even){
+    background-color: magenta;
+}
+
 /* 
 reset css
 user-agent
