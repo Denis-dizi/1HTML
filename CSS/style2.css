@@ -1,5 +1,8 @@
 /* 2020.09.21. Look with HTML4 */
-body{background-color: rgb(204, 181, 226);}
+body{
+    background-color: rgb(204, 181, 226);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 table{
     border-collapse: collapse ;
@@ -76,6 +79,14 @@ table{
     padding: 10px 40px 60px 80px;
 }
 
+#button:hover{
+    background-color: blueviolet;
+}
+
+#button:active{
+    background-color: chartreuse;
+    box-shadow: 2px 2px 2px darkblue;
+}
 /* 
 reset css
 user-agent

@@ -1,0 +1,30 @@
+
+.......
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<style>
+		form[name="form"] {border: 1px solid red;border-radius: 4px;padding: 10px;width: 400px;font-family: Tahoma, Verdana, sans-serif;}
+		form label{display: inline-block;width: 150px;}
+	</style>
+</head>
+<body>
+	<form name="form" method="post" action="">
+		<!-- <legend>Form legend</legend> -->
+		<figcaption>Form</figcaption>
+		<label for="name">Your name here: </label>
+		<input type="text" name="name" id="name">
+		<br><br>
+		<label for="password">Your password here: </label>
+		<input type="password" name="password" id="password">
+		<br><br>
+		<label for="agree">Agree with <a href="#">Terms</a>: </label>
+		<input type="checkbox" name="agree" id="agree">
+		<br><br>
+		<input type="submit" name="submit">
+	</form>
+</body>
+</html>
