@@ -1,5 +1,9 @@
-body{background-color: blueviolet;}
+body{background-color: rgb(204, 181, 226);}
 
 table{
-    border-collapse: ;
+    border-collapse: collapse ;
 }
+.table1, .table2 {
+    border-collapse: collapse ;
+}
+
