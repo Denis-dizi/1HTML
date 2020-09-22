@@ -1,0 +1,42 @@
+/* 2020.09.22 Look with HTML5.htnl */
+*{
+    box-sizing: border-box;
+}
+
+div, section {
+    border: 1px solid black;
+}
+
+.lfloated{
+    float: left;
+    width: 30%;
+    background-color: darkcyan;
+}
+.rfloated{
+    float: right;
+    width: 30%;
+    background-color: blueviolet
+}
+
+.ordinary{
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 30%;
+    background-color: chartreuse;
+}
+
+#section2{
+    background-color: yellow;
+}
+
+#section1::after{
+    content: "";
+    clear: both;
+    display: table;
+    background-color: rosybrown;
+}
+
+.float50{
+    float: left;
+    width: 50%;
+}
