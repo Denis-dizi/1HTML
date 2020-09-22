@@ -22,9 +22,9 @@ Emmet
 2020.09.18
 VSCode key bindings:
 ctrl + k -> open file
-ctrl + k, ctrl + o -> open folder
+ctrl + k + o -> open folder
 
 shift + alt + arrow down -> 
-ctrl + shift + k ->
+ctrl + shift + k -> delete line
 alt + arrow up -> moves line up
 ctrl + [ -> moves code line left for one tab, same for right
