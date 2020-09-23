@@ -1,15 +1,20 @@
 /* 2020.09.21. Look with HTML4 */
+/* (0:05:) */
 body{
     background-color: rgb(201, 201, 201);
+    /* (2:54:) */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* (1:36:) */
 /* html{color: greenyellow;} */
 
+/* (0:07:) */
 table{
     border-collapse: collapse ;
 }
+
+/* (0:15:) */
 /* .table1, .table2 {
     border-collapse: collapse ;
 } */
@@ -19,17 +24,22 @@ table{
     color: green;
 }
 
+/* (2:52:) */
+input{outline: none;}
+
+/* (0:32:) */
 #heading1 {
     color: red;
 }
 #heading2 {
     color: rgb(204, 181, 226);
 }
+/* (0:55:) colors */
 #heading3 {
     color: rgba(red, green, blue, alpha);
 }
 
-/* (1:06:) */
+/* (1:06:)(2:41/45/49/59:) */
 #button {
     width: 80px;
     height: 32px;
@@ -37,11 +47,49 @@ table{
     font-size: 24px;
     text-align: center;
     background-color: green;
+    /* background: linear-gradient(green, lightseagreen, red); */
     color: yellow;
-    border: 1px solid lightseagreen;
+    border: 5px solid lightseagreen;
     border-radius: 8px;
+    box-shadow: 2px 2px 5px grey;
+    margin: 5px;
+    margin-bottom: 40px;
     /* opacity: .5; */
+    user-select: none;
+    cursor: pointer;
 }
+
+/* (2:46:) */
+#button:hover{
+    background-color: blueviolet;
+}
+
+/* (2:47:) */
+#button:active{
+    background-color: chartreuse;
+    box-shadow: 2px 2px 2px darkblue;
+}
+
+/* {2:20/29:}2 */
+.klucitis{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color: olivedrab;
+    border: 2px solid red;
+    /* margin conflikts with padding */
+    margin: 20px 30px;
+    /* with auto - responsive */
+    /* margin: 20px auto; */
+}
+
+/* (2:20/22/29:) */
+#klucisi{
+    background-color: pink;
+    /* to activate padding, turn off margin */
+    /* padding: 10px 40px 60px 80px; */
+}
+
 
 /* (1:28:) */
 #table1{
@@ -77,35 +125,9 @@ table{
     color: black;
 }
 
-/* {2:20:}2 */
-.klucitis{
-    display: inline-block;
-    width: 100px;
-    height: 50px;
-    background-color: olivedrab;
-    border: 2px solid red;
-    margin: 20px 30px;
-}
 
-/* {2:20:}1 */
-#klucitis{
-    background-color: #777;
-    padding: 10px 40px 60px 80px;
-}
 
-/* (2:22/29:) */
-#klucisi{
-    background-color: pink;
-}
 
-#button:hover{
-    background-color: blueviolet;
-}
-
-#button:active{
-    background-color: chartreuse;
-    box-shadow: 2px 2px 2px darkblue;
-}
 /* 
 (0:34:)
 reset css
