@@ -4,6 +4,9 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* (1:36:) */
+/* html{color: greenyellow;} */
+
 table{
     border-collapse: collapse ;
 }
@@ -11,8 +14,9 @@ table{
     border-collapse: collapse ;
 } */
 
+/* 0:39: */
 .tdgreen{
-    color: blue;
+    color: green;
 }
 
 #heading1 {
@@ -25,6 +29,7 @@ table{
     color: rgba(red, green, blue, alpha);
 }
 
+/* (1:06:) */
 #button {
     width: 80px;
     height: 32px;
@@ -38,45 +43,59 @@ table{
     /* opacity: .5; */
 }
 
+/* (1:28:) */
 #table1{
     width: 100%;
     border-collapse: collapse;
 }
 
+/* (1:31:) */
 /* #table1>td */
 #table1 td{
     text-align: center;
 }
 
+/* (1:47:) */
 /* #table1>tbody */
+/* (1:43:) */
 #table1 tbody tr:nth-child(even){
     background-color: magenta;
 }
 
+/* (1:49:) */
 #table1 td+td{
     color: grey;
 }
 
+/* (1:54:)(2:10:) */
 #table1 tbody p+span{
     color: violet;
 }
 
+/* (1:54:)(2:00:) */
 #table1 p~span{
     color: black;
 }
 
+/* {2:20:}2 */
 .klucitis{
     display: inline-block;
     width: 100px;
     height: 50px;
-    background-color: tomato;
+    background-color: olivedrab;
     border: 2px solid red;
     margin: 20px 30px;
 }
 
-#klucisi{
+/* {2:20:}1 */
+#klucitis{
     background-color: #777;
     padding: 10px 40px 60px 80px;
+}
+
+/* (2:22/29:) */
+#klucisi{
+    background-color: pink;
 }
 
 #button:hover{
@@ -88,9 +107,11 @@ table{
     box-shadow: 2px 2px 2px darkblue;
 }
 /* 
+(0:34:)
 reset css
 user-agent
 
+(0:42:)
 Colors:
 color - for font
 background-color
