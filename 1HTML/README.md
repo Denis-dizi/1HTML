@@ -1,2 +1,2 @@
 # 1HTML <br>
-second try<hr>
+Lectures. second try<hr>
