@@ -1,2 +1,2 @@
 # 1HTML <br>
-Lectures. second try<hr>
+HTML Lectures and homeworks.
