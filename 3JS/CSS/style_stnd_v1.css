@@ -3,7 +3,10 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 /* html, body {
     margin: 0;
@@ -19,8 +22,16 @@ header {
     /* width:100%;  */
     /* margin: 0; */
     /* width: 100vw; */
+
+    /* position: absolute; */
+    /* left: 0;
+    top: 0;
+    width: 100%; */
 }
 
+/* body {
+    position: absolute;
+} */
 
 footer {
     /* grid-area: footer; */
@@ -28,6 +39,15 @@ footer {
     padding: 10px;
     text-align: center;
     color: aliceblue;
+
+    /* https://stackoverflow.com/questions/3443606/make-footer-stick-to-bottom-of-page-correctly */
+    /* Stretching an HTML page to full height: */
+    /* https://makandracards.com/makandra/39473-stretching-an-html-page-to-full-height */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* overflow: hidden; */
 
     /* position: absolute;
     bottom: 0; */
