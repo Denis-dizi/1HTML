@@ -1,0 +1,144 @@
+grid.html
+E
+Type
+HTML
+Size
+2 KB (2,130 bytes)
+Storage used
+0 bytes
+Location
+WEB Bootcamp (15.09.)
+Owner
+Eduards
+Modified
+Sep 24, 2020 by Eduards
+Opened
+1:42 AM by me
+Created
+Sep 24, 2020
+No description
+Viewers can download
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.flexed{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: 100px auto 100px;
+  grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main aside"
+    "footer footer footer";
+}
+
+#header{
+  grid-area: header;
+  min-height: 100px;
+  background: #ddf;
+}
+#nav{
+  grid-area: nav;
+  background: #dfd;
+}
+
+#nav>ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+#nav>ul>li{
+  display:inline-block;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  margin: auto 0px;
+  text-align: center;
+  background: #cec;
+  color: white;
+  transition: .3s;
+}
+#nav>ul>li:hover{
+  background: #bdb;
+  
+}
+#nav>ul>li>a{
+  display:inline-block;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+#aside{
+  grid-area: aside;
+  background: #fdf;
+}
+
+#main{
+  grid-area: main;
+  min-height: 200px;
+  background: #ebf;
+}
+
+#footer{
+  grid-area: footer;
+  background: #ddf;
+}
+
+@media screen and (max-width: 700px){
+  .container{
+  grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "footer footer footer"
+    "main main main";
+  }
+  #aside{
+    display: none;
+  }
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+  <div class="flexed" id="header">Header</div>
+	  
+	<div id="nav">
+	  nav
+	</div>
+	  <div class="flexed" id="aside">Aside</div>
+	  <div class="flexed" id="main">Main</div>
+	  <div class="flexed" id="footer">Footer</div>
+	</div>
+	<script>
+		const nav = document.getElementById('nav')
+
+		const menus = [
+		  {name: 'Home', path: '/home'},
+		  {name: 'Products', path: '/products'},
+		  {name: 'Clients', path: '/clients'},
+		  {name: 'About us', path: '/aboutus'},
+		  {name: 'Contacts', path: '/contacts'}
+		]
+
+		var out = ''
+		out += '<ul>'
+
+		menus.forEach(menu => {
+		  // console.log(menu)
+		  out += `<li><a href="${menu.path}">${menu.name}</a></li>`
+		})
+		out += '</ul>'
+		nav.innerHTML = out
+	</script>
+</body>
+</html>
