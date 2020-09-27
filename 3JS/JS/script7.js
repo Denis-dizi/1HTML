@@ -1,8 +1,15 @@
-console.log("Hello from JS!");
+// v2 - video 2
+// v3 - video 3
 
+// Will be seen only in console F12:
+//(0:00: v2)
+console.log("Hello from JS");
+
+//(0:09: v2)
 console.log(document.getElementById(`user`));
 
-document.getElementById(`user`).innerHTML = `<h1>Hello from inner HTML</h1>`;
+//(0:15: v2)
+document.getElementById(`user`).innerHTML = `<h2>Hello from innerHTML</h2>`;
 document.write("Document .write");
 
 window.onload = () => {

@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(201, 201, 201);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* html, body {
+    margin: 0;
+   } */
+
+header {
+    background-color: #000000;
+    padding: 30px;
+    color: aliceblue;
+    /* text-align: center; */
+    /* font-size: 35px; */
+    color: darkgray;
+    /* width:100%;  */
+    /* margin: 0; */
+    /* width: 100vw; */
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+
+header a, footer a {
+    color: rgb(0, 225, 255);
+}
