@@ -12,7 +12,7 @@ console.log(document.getElementById(`user`));
 document.getElementById(`user`).innerHTML = `<h2>Hello from innerHTML</h2>`;
 
 //(0:18: v2)
-document.write("Document .write");
+document.write("<p>Document .write</p>");
 console.log(`= = = = = = = = = = = (¬‿¬) (ᵔᴥᵔ) }<((((°>`);// ASCII Images
 
 //(0:18: v2)
