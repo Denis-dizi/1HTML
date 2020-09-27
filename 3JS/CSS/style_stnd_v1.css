@@ -33,6 +33,10 @@ header {
     position: absolute;
 } */
 
+body {
+    min-height: 100vh;
+  }
+
 footer {
     /* grid-area: footer; */
     background-color: #000000;
