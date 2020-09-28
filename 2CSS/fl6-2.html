@@ -7,7 +7,7 @@
     <!-- Link Bootsrtap CSS before your own CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style_stnd_v1.css">
-    <link rel="stylesheet" href="css/style6-2.css">
+    <link rel="stylesheet" href="CSS/style6-2.css">
     
 </head>
 <body>
@@ -25,9 +25,47 @@
         </div>
         <div class="container-lg">
             div class container-lg
+            <!-- (2:38:) -->
+            <!-- .row -->
+            <div class="row">
+                <!-- .col*6{Column $} -->
+                <div class="col">Column 1</div>
+                <div class="col">Column 2</div>
+                <div class="col">Column 3</div>
+                <div class="col">Column 4</div>
+                <div class="col">Column 5</div>
+                <div class="col-3">Column 6</div>
+            </div>
+            <div class="row" id="tmp1">
+                <div class="col">Column 1. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi enim sapiente beatae facere quidem. Sequi mollitia adipisci recusandae labore, vel neque, laborum rem consequatur beatae saepe illo praesentium ea molestiae maxime voluptates facilis exercitationem atque eum nihil magni? Sit vero dolorum voluptatum obcaecati tenetur ea iusto fuga cum voluptatem dolor.</div>
+                <div class="col">Column 2 <br><hr>
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+                <!-- "md" - responsive break point -->
+                <div class="col-md">Column 3 <br>
+                    <button class="btn btn-primary" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                    </button>
+                </div>
+                <div class="col-5">Column 4</div>
+            </div>
         </div>
-    </div>
-
+    </div><br>
+    
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" id="option1" checked> Active
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option2"> Radio
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option3"> Radio
+        </label>
+    </div><br>
 
 
 
