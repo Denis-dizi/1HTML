@@ -1,0 +1,77 @@
+/* (1:18:) */
+#relative {
+    position: relative;
+    /* w300+h300 */
+    width: 300px;
+    height: 500px;
+    /* m0-auto */
+    /* margin: 0 auto; */
+    border: 2px solid green;
+    /* t50  */
+    top: 50px;
+    left: 100px;
+}
+
+/* (1:24:) */
+#innerabsolute, #outerabsolute {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+    top: 30px;
+    left: 10px;
+}
+
+/* (1:28:)	 */
+#outerabsolute {
+    border: 1px solid blue
+}
+
+/* (1:29:)	 */
+#fixed{
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    border: 3px dashed yellow;
+    top: 300px;
+    left: 100px;
+}
+/* (1:35:)	 */
+#fixed1{
+    position: fixed;
+    border: 3px dashed grey;
+    top: 100px;
+    left: 100px;
+    bottom: 100px;
+    right: 100px;
+}
+/* (1:35:)	 */
+#fixed2{
+    position: fixed;
+    border: 3px dashed orange;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+
+}
+
+/* (1:45:)	 */
+#second{
+    height: 1500px;
+}
+
+/* (1:45:)(2:02/05:)	 */
+.sticky{
+    position: sticky;
+    background-color: coral;
+    height: 30px;
+    line-height: 30px;
+}
+#sticky1{
+    top: 0px;
+}
+#sticky2{
+    top: 30px;
+}
