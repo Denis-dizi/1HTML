@@ -8,6 +8,6 @@ fetch('http://127.0.0.1/api/inbox/')
   .catch(e => console.log(e))
 
   function callback(data){
-    var out = ''
-    <h4 class="center"></h4><h5 class="center">15.8℃</h5>
-  }
+    console.log(data)
+    obj = data
+}
