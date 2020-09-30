@@ -88,3 +88,41 @@ console.log(y(3))
 
 console.log('= = = = = = = = = = = =');
 
+// HW
+var obj = {}
+var weather = document.getElementById('weather');
+var hwobj = [
+    {name: 'Ann', notes: [3, 5, 8]},
+    {name: 'Jeanny', notes: [4, 6, 9]},
+    {name: 'John', notes: [2, 7, 9]},
+    {name: 'Max', notes: [1, 5, 9]},
+]
+
+
+var out = '';
+out += `<h3>${hwobj[0].name}</h3>`
+out += `<ul>`
+out += `<li>Note1: ${hwobj[0].notes[0]}</li>`
+out += `<li>Note2: ${hwobj[0].notes[1]}</li>`
+out += `<li>Note3: ${hwobj[0].notes[2]}</li>`
+out += `</ul>`
+
+out += `<h3>${hwobj[1].name}</h3>`
+out += `<ul>`
+out += `<li>Note1: ${hwobj[1].notes[0]}</li>`
+out += `<li>Note2: ${hwobj[1].notes[1]}</li>`
+out += `<li>Note3: ${hwobj[1].notes[2]}</li>`
+out += `</ul>`
+
+out += `<h3>${hwobj[2].name}</h3>`
+out += `<ul>`
+out += `<li>Note1: ${hwobj[2].notes[0]}</li>`
+out += `<li>Note2: ${hwobj[2].notes[1]}</li>`
+out += `<li>Note3: ${hwobj[2].notes[2]}</li>`
+out += `</ul>`
+
+console.log(out);
+
+document.getElementById('hwobj').innerHTML = out;
+
+console.log('= = = = = = = = = = = =');
