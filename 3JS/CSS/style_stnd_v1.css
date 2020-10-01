@@ -60,3 +60,8 @@ footer {
 header a, footer a {
     color: rgb(0, 225, 255);
 }
+
+.content {
+    /* width: 75%; */
+    /* height: 55vh */
+  }
