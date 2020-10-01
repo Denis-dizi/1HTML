@@ -4,11 +4,11 @@ body{
     margin: 0 auto;
 }
 
-/* html {
+html {
     position: relative;
     min-height: 100%;
-    padding:20px;
-} */
+    
+}
 
 /* html, body {
     margin: 0;
