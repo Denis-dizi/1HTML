@@ -1,10 +1,13 @@
+// (0:49/52:)(1:11/16:)
+// For cycle
+
 var data;
 const posts = document.getElementById('posts');
 
 fetch('https://jsonplaceholder.typicode.com/posts')
   .then(response => response.json())
-  // .then(data => renderTable(data))
-  .then(data => console.log(data));
+  .then(data => renderTable(data))
+  // .then(data => console.log(data));
 
 function renderTable(obj){
 data = obj
@@ -22,4 +25,6 @@ console.log(`data:`);
 console.log(data);
 console.log(`posts:`);
 console.log(posts);
+// console.log(arrLength);
+// console.log(data.length);
 
