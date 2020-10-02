@@ -36,7 +36,8 @@ console.log('= = = = = = = = = = = ');
 //find
 // (1:15:)
 console.log('find:');
-console.log(arr1.find((el) => el = 45))
+console.log(arr1.find((el) => el == 45))
+console.log(arr1.find((el) => el == 9))
 console.log(arr1.find((el) => el > 23)) //??????
 console.log('find index:');
 console.log(arr1.findIndex((el) => el == 9)) // 2
