@@ -1,3 +1,5 @@
+// (0:42:) video 2
+// For in cycle
 function renderTable(obj){
   data = obj
   let out = ''
@@ -13,7 +15,7 @@ function renderTable(obj){
   for(let index in obj) {
     out += `<h3>${obj[index].title}</h3>
       <p>${obj[index].body}</p>
-      <p>Foreach</p>
+      <p>ForIn</p>
       <p>post ID: ${obj[index].id}</p>`
   }
 

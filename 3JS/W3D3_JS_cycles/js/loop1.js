@@ -1,4 +1,5 @@
 // (0:11:) video 2
+//While cyle
 function renderTable(obj){
   data = obj
   let out = ''
