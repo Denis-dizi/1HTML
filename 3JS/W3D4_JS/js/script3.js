@@ -30,6 +30,6 @@ function renderTable(data) {
         </tr>`
     });
     out += `</tbody></table>`
-
+    // console.log(out)
     document.getElementById('table').innerHTML = out
 }
