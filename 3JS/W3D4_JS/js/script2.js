@@ -46,7 +46,7 @@ $(document).ready(function(){
           $('#modal').html('<h1>Succes Login!</h1>')
           setTimeout(()=>{
           location.reload()
-          }, 3000);
+          }, 15000);
         }
       })
     })
