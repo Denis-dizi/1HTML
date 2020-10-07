@@ -1,2 +1,2 @@
-<H1>3JS</h1><BR>
+<H1>3JS</h1>
 JS lectures
