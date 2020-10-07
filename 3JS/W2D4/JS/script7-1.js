@@ -9,7 +9,7 @@ console.log("Hello from JS");
 console.log(document.getElementById(`user`));
 
 //(0:15: v2)
-document.getElementById(`user`).innerHTML = `<h2>Hello from innerHTML</h2>`;
+document.getElementById(`user`).innerHTML = `<h4>Hello from innerHTML</h4>`;
 
 //(0:18: v2)
 document.write("<p>Document .write</p>");
