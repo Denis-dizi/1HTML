@@ -43,7 +43,7 @@ console.log(`Hello` + ` World`); // Hello World
 console.log(str1 + ` ` + str2);  // Hello World
 console.log(`${str1} ${str2}`);  // Hello World
 console.log(4 + `8`);       // 48
-console.log(4 + + '8');     // 12
+console.log(4 + + '8');     // 12 // " + +" - converts string to number (1:50:)
 console.log(4 + 4 + '8');   // 88
 console.log(4 + '8' + 4);   // 484
 

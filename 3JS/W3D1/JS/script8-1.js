@@ -1,8 +1,8 @@
 // W3D1 2020.09.28
 var a = `Hello`;
 
-// document.qsela
 console.log('getElementBy*:');
+
 document.getElementById(`h2`);
 console.log('typeof:');
 console.log(typeof document.getElementById('h2'));
@@ -18,6 +18,7 @@ document.querySelector(`button`);
 console.log(document.querySelector(`button`));
 console.log(document.querySelector(`h2`));
 // (0:17:)
+// document.qsela
 console.log(document.querySelectorAll(`button`));
 console.log(`= = = = = = = = = = = = =`);
 

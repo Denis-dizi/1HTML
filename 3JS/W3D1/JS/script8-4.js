@@ -36,10 +36,11 @@ var car = {
 
 // (2:21:)
 console.log(car);
-console.log('car color: ' + car.color);
-console.log('car wheels: ' + car['wheels']);
+console.log('car color: ' + car.color); //white
+console.log('car wheels: ' + car['wheels']); //4
 var parametr = 'wheels'
-console.log('car wheels: ' + car[parametr]);
+console.log('car wheels: ' + car[parametr]); //4
+console.log('car wheels: ' + car.wheels); //4
 
 console.log('= = = = = = = = = = = =');
 console.log('Date:');

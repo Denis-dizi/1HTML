@@ -5,7 +5,7 @@
 // primitivie - dod vertibas
 // string, number, boolean, undefined
 
-// complex - dod atsuces uz obj
+// complex - dod atsauces uz obj
 // function, object
 
 // (1:08:)
@@ -24,8 +24,10 @@ function hello(par) {
 function hello2(obj) {
     obj.a = `there`
 }
-console.log(a);
-console.log(b);
+console.log('console.log(a):');
+console.log(a); //hello
+console.log('console.log(b):');
+console.log(b); //{a: "there"}
 console.log('= = = = = = = = = = = = = = = = =');
 
 
@@ -47,5 +49,5 @@ function hello4(obj) {
     obj.c = 30
 }
 console.log(c); //5
-console.log(d); //obj c:30
+console.log(d); //{c: 30} - object 
 console.log('= = = = = = = = = = = = = = = = =');
