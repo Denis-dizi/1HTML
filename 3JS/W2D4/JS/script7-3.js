@@ -1,3 +1,5 @@
+//(1:17:) functions runing last of all other script
+//(1:21:)
 for(var i=0; i<6; i++){
     setTimeout(function(){
         console.log(`var`, i)

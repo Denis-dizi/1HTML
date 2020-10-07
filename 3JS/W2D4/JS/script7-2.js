@@ -7,7 +7,7 @@ var a; // value is undefined. Look console
 //let a; // Error. Can not be after function
 
 //(1:29:)
-var a = 1;
+var a = 1; //undefined
 console.log(`a`, a);
 console.log(`= = = = = = = = = = = `);
 
@@ -67,18 +67,4 @@ console.log(`aa==ab??: `,aa == ab);
 console.log(`Who is "ab"? - `, typeof ab);
 console.log(`Who is "obj{}"? - `, typeof obj);
 console.log(`Who is "arr[]"? - `, typeof arr);
-
-
-//(1:17:) functions runing last of all other script
-for(var i=0; i<6; i++){
-    setTimeout(function(){
-        console.log(`cycle var`, i)
-    }, 0)
-}
-
-for(let k=0; k<6; k++){
-    setTimeout(function(){
-        console.log(`cycle let`, k)
-    }, 0)
-}
 console.log(`= = = = = = = = = = = `);
