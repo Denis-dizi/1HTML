@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS deep dive examples</title>
+      <link rel="stylesheet" href="CSS/style_stnd_v2.css">
+      <link rel="stylesheet" href="sass/deepdive.css">    
+  </head>
+  <body>
+    <div id="container">
+        <div id="header">
+            <h1>CSS deep dive examples</h1>          
+        </div>
+
+        <div id="body">
+                       
+
+
+            <h2>Transition all</h2>
+
+<pre contenteditable="" class="code">code {
+   color: black;
+   font-size: 85%;
+   background-color: rgba(255,255,255,0.9);
+   transition: all 2s ease-in 50ms;
+}
+code:hover {
+   color: red;
+   font-size: 120%;
+   background-color: rgba(255,255,255,0.8);
+}
+</pre>
+
+<h2>Transition the transform property</h2>
+
+
+<pre contenteditable="" class="code code2">code {
+   color: black;
+   font-size: 85%;
+   background-color: rgba(255,255,255,0.9);
+   transition: all 2s ease-in 50ms;
+}
+code:hover {
+   color: red;
+   transform: scale(1.4);
+   transform-origin: 0 0;
+   background-color: rgba(255,255,255,0.8);
+}
+</pre>
+<h2>Gradient Red to Transparent</h2>
+<div class="gradient"></div>
+
+
+<h2>Gradient Red to Transparent Red</h2>
+<div class="gradient2"></div>
+
+<h2>Hover transitions</h2>
+<div class="colour-transition"></div>
+<div class="colour-transition2"></div>
+
+<h2>Relative position example</h2>
+<div class="relative-demo">
+  <div class="relative-container">
+    <div class="relative-box">Relative positioned element</div>
+    <div class="relative-demo-floater"></div>
+  </div> 
+</div>
+
+
+<h2>Floats</h2>
+
+<div class="relative-demo float-demo">
+  <div class="div1">div 1</div>
+  <div class="div2">div 2</div>
+  <div class="div3">div 3</div>
+  <div class="div4">div 4</div>
+  <div class="div5">div 5</div>
+  <div class="clearFix"></div>
+</div>
+
+<h2>Pure CSS error messages</h2>
+<ul>
+    <li><input type="number" min="5" max="7"> (5,6 or 7)</li>
+    <li><input type="number" min="5" max="7"> (5,6 or 7)</li>
+    <li><input type="number" min="5" max="7"> (5,6 or 7)</li>
+    <li><input type="email"> (email)</li>
+  </ul>
+<p class="error-msg"></p>
+
+
+<h2>Relational Selectors and Combinators</h2>
+<ol class="relational-demo">
+  <li>I super love</li>
+  <li>working with</li>
+  <li>rainbows and CSS</li>
+  <li>and unicorns with
+    <ul>
+      <li class="first-level">fluffy kittens and</li>
+      <li>Lollypops that go bang</li>
+      <li>in the night and
+      <ul>
+        <li>fluffy kittens and</li>
+        <li>Lollypops that go bang</li>
+        <li class="second-level">in the night and</li>
+        <li>Lollypops that go bang</li>
+        <li>in the night and</li>
+      </ul>
+      </li>
+    </ul>
+  </li>
+  <li>force you to stay awake</li>
+  <li>and not get any sleep and</li>
+  <li>go totally mental</li>
+  <li>in the morning!</li>
+  <li>Hooooray!</li>
+</ol>
+
+
+<h2>Responsive DIV</h2>
+
+<div class="responsive-div"></div>
+
+
+
+
+        </div>
+
+       
+        <div id="footer">
+            <p>Use validator to check the code: <a target="_blank" href="https://validator.w3.org"> validator.w3.org </a></p>
+        </div>
+
+    </div>
+</body>
+</html>
