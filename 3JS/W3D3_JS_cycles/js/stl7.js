@@ -2,7 +2,7 @@
 // ForEach
 // (1:05:) video 2
 //copy from loop2.js and ForOff (stl5.js))
-//filter function
+//.filter method
 function renderTable(obj){
     data = obj;
     let out = ``;
@@ -18,4 +18,5 @@ function renderTable(obj){
 
     posts.innerHTML = out
 }
-console.log(`filter method`)
+console.log(`.filter method:`)
+console.log(`obj = obj.filter(el => el.id > 80);`)

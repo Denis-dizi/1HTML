@@ -10,10 +10,10 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   // .then(data => console.log(data));
 
 function renderTable(obj){
-data = obj
-let out = ''
+  data = obj
+  let out = ''
 
-  var arrLength = obj.length
+  var arrLength = obj.length // lai navajdz'etu katru reizi skait'it no jauna
   for (let i = 0; i < arrLength; i++){
     out += `<h3>${obj[i].title}</h3>`
     out += `<p>${obj[i].body}</p>`
