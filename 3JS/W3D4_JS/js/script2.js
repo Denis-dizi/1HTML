@@ -5,7 +5,7 @@
 // $ jQuery's global object
 
 // jQuery code starts
-//(:31:)
+//(:31:) jQuery will start after HTML complete load
 $(document).ready(function(){
     console.log($('#but1'))
     $('#text2').hide()
@@ -28,7 +28,23 @@ $(document).ready(function(){
       console.log(status)
     })
   
+    //(1:42:)
+    //Run XAMMP and Apache!!!!!!
+    // https://www.w3schools.com/jquery/jquery_ajax_get_post.asp
+    $('#butpost').click(()=>{
+      $.post("http://localhost/php/test2.php",
+        {
+          name: "Donald Duck",
+          city: "Duckburg"
+        },
+        function(data, status){
+        console.log("Data: " + data + "\nStatus: " + status);
+      });
+    });
+
+
     //(1:35/47:)
+    // $('#butpost').click(()=>{
     $('#fsubmit').click(()=>{
       // $.post("http://192.168.1.151/test.php",
       //(2:04:)
@@ -50,6 +66,7 @@ $(document).ready(function(){
         }
       })
     })
+
   })
   // jQuery code ends
   

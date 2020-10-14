@@ -13,21 +13,22 @@ fetch('data3.json')
 //   .then(data => console.log(data))
   .then(data => renderTable(data));
 
-
+//Render Table with "forEach"
 console.log('type "table" to see data.')
 function renderTable(data) {
     table = data
     let out =''
-    out += `<table id="myTable"><thead>
+    out += 
+    `<table id="myTable"><thead>
     <tr><th>ID</th><th>Name</th><th>User Name</th><th>email</th>
     </tr></thead><tbody>`
     data.forEach(element => {
-        out += `<tr>
-        <td>${element.id}</td>
-        <td>${element.name}</td>
-        <td>${element.username}</td>
-        <td>${element.email}</td>
-        </tr>`
+      out += `<tr>
+      <td>${element.id}</td>
+      <td>${element.name}</td>
+      <td>${element.username}</td>
+      <td>${element.email}</td>
+      </tr>`
     });
     out += `</tbody></table>`
     // console.log(out)

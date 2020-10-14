@@ -13,7 +13,7 @@ fetch('data3.json')
 //   .then(data => console.log(data))
   .then(data => renderTable(data));
 
-
+//Render Table with "arr.map" + "arr.join"
 console.log('type "table" to see data.')
 function renderTable(data) {
     table = data
@@ -22,13 +22,13 @@ function renderTable(data) {
     `<table id="myTable2"><thead>
     <tr><th>ID</th><th>Name</th><th>User Name</th><th>email</th>
     </tr></thead><tbody>`
-        out += data.map(element => {
-        return `<tr>
-        <td>${element.id}</td>
-        <td>${element.name}</td>
-        <td>${element.username}</td>
-        <td>${element.email}</td>
-        </tr>`
+    out += data.map(element => {
+      return `<tr>
+      <td>${element.id}</td>
+      <td>${element.name}</td>
+      <td>${element.username}</td>
+      <td>${element.email}</td>
+      </tr>`
     }).join(' ');
     out += `</tbody></table>`
     // console.log(out)
