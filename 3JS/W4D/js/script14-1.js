@@ -113,11 +113,41 @@ console.log('see *.js file');
 console.groupEnd();
 console.log('\n');
 
+// = = Date = =
+//(0:30:) 1st video
+console.group('Dates');
+console.log('Dates');
+console.log('new Date; =');
+console.log(new Date);
+console.log('\n');
 
+console.log('let date = new Date();');
+let date = new Date();
+console.log('console.log(date.getHours()); =');
+console.log(date.getHours());
+console.log(date.getMinutes());
+console.log(date.getSeconds());
+console.log('date.getHours() + \':\' + date.getMinutes(); =');
+console.log(date.getHours() + ':' + date.getMinutes());
+console.log('\n');
+
+console.log('Convert date:');
+console.log('date.toGMTString(); =')
+console.log(date.toGMTString());
+console.log('\n');
+
+console.log('date.toISOString(); =')
+console.log(date.toISOString());
+console.log('\n');
+
+console.log('https://momentjs.com/');
+console.groupEnd();
+console.log('\n');
 
 // = = = = = = = LOOPS = = = = = = = = = = = = =
 console.group('Loops');
 // For loop
+//(0:20:)
 console.log('For');
 console.log('for (let i = 0; i < 6; i+=2) {\nconsole.log("Hello For loop 1");\n}; =');
 for (let i = 0; i < 6; i+=2) {
@@ -139,20 +169,9 @@ console.log('for (let i = 10; i >= 0; i-=2) {...}; =');
 for (let i = 10; i >= 0; i-=2) {
     console.log('Hello For loop 4. Nr. ' + i);
 }
-
-
-console.log('\n');
-new Date()
-console.log(new Date);
-
-let date = new Date();
-date.getHours();
-console.log(date.getHours());
-
-date.toGMTString
-
 console.log('\n');
 
+//(0:35:) 1st vid
 var arr1 = ["a", "b", "c"]
 console.log(arr1);
  for (let i = 0; i < arr1.length; i++){
