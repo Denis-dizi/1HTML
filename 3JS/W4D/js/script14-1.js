@@ -113,23 +113,35 @@ console.log('see *.js file');
 console.groupEnd();
 console.log('\n');
 
-console.group('Loops');
 
+
+// = = = = = = = LOOPS = = = = = = = = = = = = =
+console.group('Loops');
+// For loop
+console.log('For');
+console.log('for (let i = 0; i < 6; i+=2) {\nconsole.log("Hello For loop 1");\n}; =');
+for (let i = 0; i < 6; i+=2) {
+    console.log("Hello For loop 1");
+}
+console.log('for (let i = 1; i <= 6; i++) {cons...}; =');
+for (let i = 1; i <= 6; i++) {
+    console.log("Hello For loop 2");
+}
+console.log('\n');
+
+console.log('for (let i = 0; i < 3; i++) {console.log(\'Hello For loop 3. Nr. \' + i)}; =');
+for (let i = 0; i < 3; i++) {
+    console.log('Hello For loop 3. Nr. ' + i)
+}
+console.log('\n');
+
+console.log('for (let i = 10; i >= 0; i-=2) {...}; =');
+for (let i = 10; i >= 0; i-=2) {
+    console.log('Hello For loop 4. Nr. ' + i);
+}
 
 
 console.log('\n');
-// For loop
-
-for (let i = 0; i < 5; i+=3) {
-    console.log("Hello For loop 1");
-}
-// console.log(for());
-
-
-for (let i = 1; i <= 5; i++) {
-    console.log("Hello For loop 2");
-}
-
 new Date()
 console.log(new Date);
 
@@ -138,6 +150,8 @@ date.getHours();
 console.log(date.getHours());
 
 date.toGMTString
+
+console.log('\n');
 
 var arr1 = ["a", "b", "c"]
 console.log(arr1);
@@ -153,7 +167,7 @@ console.log(arr1);
 // str.length < 8
 
 //While loop
-
+console.log('\n');
 var j = 0;
 while (j < 0.5){
     console.log(j);
@@ -167,7 +181,7 @@ while (m < 5){
     m++;
 }
 
-
+console.log('\n');
 //For each
 
 var array = [true, true, false, true];
