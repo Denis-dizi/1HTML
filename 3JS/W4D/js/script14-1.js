@@ -3,7 +3,7 @@
 // W03L02 - JavaScript looping & functions & prototypes.
 
 //Repeat W4D2 data types:
-
+//(0:07:) 1st video
 console.group('repeat data types')
 console.log('Boolean. False, True values:');
 console.log('falsely - 0, \'\' (empty string), null, undefined, NaN');
@@ -147,7 +147,7 @@ console.log('\n');
 // = = = = = = = LOOPS = = = = = = = = = = = = =
 console.group('Loops');
 // For loop
-//(0:20:)
+//(0:20:) 1st video
 console.log('For');
 console.log('for (let i = 0; i < 6; i+=2) {\nconsole.log("Hello For loop 1");\n}; =');
 for (let i = 0; i < 6; i+=2) {
