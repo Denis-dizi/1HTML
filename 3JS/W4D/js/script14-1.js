@@ -148,7 +148,7 @@ console.log('\n');
 console.group('Loops');
 // For loop
 //(0:20:) 1st video
-console.log('For');
+console.log('For loop');
 console.log('for (let i = 0; i < 6; i+=2) {\nconsole.log("Hello For loop 1");\n}; =');
 for (let i = 0; i < 6; i+=2) {
     console.log("Hello For loop 1");
@@ -171,22 +171,44 @@ for (let i = 10; i >= 0; i-=2) {
 }
 console.log('\n');
 
+// = = = For loop through an array = = =
 //(0:35:) 1st vid
+console.log('For loop through an array');
+console.log('var arr1 = ["a", "b", "c"]; =');
 var arr1 = ["a", "b", "c"]
 console.log(arr1);
- for (let i = 0; i < arr1.length; i++){
-    console.log(arr1[i]);
- }
+console.log('for (let i = 0; i < arr1.length; i++){console.log(arr1[i]);} =');
+for (let i = 0; i < arr1.length; i++){
+console.log(arr1[i]);
+}
+console.log('\n');
 
- for (let i = 0; i < arr1.length; i++){
-    console.log(arr1[i]**2);
- }
+var arr1 = [1, 2, 3, 4]
+console.log('var arr1 = [1, 2, 3, 4];\nfor(...){console.log(arr1[i]**2);} =')
+for (let i = 0; i < arr1.length; i++){
+console.log(arr1[i]**2);
+}
+console.log('\n');
 
-// str.length
-// str.length < 8
+//For loop through text (string)
+console.log('For loop through text (string)');
+//(0:38:) 1st vid
+let str = "Mobilis in Mobili" //Moving within a moving element
+console.log('let str = \"Mobilis in Mobili\"\nfor (...){console.log(str[i]);} =');
+for (let i = 0; i < str.length; i++){
+    console.log(str[i]);
+}
+console.log('\n');
+console.log('Data validation for user name:')
+console.log('str.length; =');
+console.log(str.length);
+console.log('str.length < 8; =');
+console.log(str.length < 8);
+console.log('\n');
 
 //While loop
-console.log('\n');
+//(0:00:) 2nd vid
+console.log('While loop');
 var j = 0;
 while (j < 0.5){
     console.log(j);
