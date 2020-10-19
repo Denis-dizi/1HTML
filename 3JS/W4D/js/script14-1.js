@@ -204,7 +204,7 @@ console.log('str.length; =');
 console.log(str.length);
 console.log('str.length < 8; =');
 console.log(str.length < 8);
-console.log('\n');
+console.log(' = = = = = = = = = = = = = =');console.log('\n');
 
 //While loop
 //(0:00:) 2nd vid
@@ -218,15 +218,25 @@ console.log("\n");
 
 var m = 0;
 while (m < 5){
-    console.log(j)
+    console.log(m)
     m++;
 }
+console.log("\n");
 
+var i = 3;
+while (i > 0) {
+    console.log('Hello Nr' + i)
+    i--
+}
+console.log(' = = = = = = = = = = = = = =');console.log('\n');
+
+//For each. only for arrays
+//(0:12:) 2nd vid
+console.log("forEach. only for arrays");
 console.log('\n');
-//For each
 
+console.log("example with index:");
 var array = [true, true, false, true];
-
 array.forEach(function(value, index) {
     if (value) {
         console.log('The value at index ' +index+ ' is true')
@@ -234,20 +244,84 @@ array.forEach(function(value, index) {
         console.log('The value at index ' +index+ ' is false')
     }
 });
+console.log('\n');
 
-// var sum = 0;
+console.log("example with price list:");
+var arr = [1, 0, 2, 5, 7, 2, 8, 3];
+console.log(arr);
+var sum = 0;
+arr.forEach(function(val, i) {
+    sum += val;
+    console.log(sum);
+})
+console.log('\n');
 
-// arr1.forEach(function(val, i)) {
-//     console.log(sum);
-//     sum += val;
-// }
-
-
-var arr = [];
-for (let i = 0; i < 100; i++){
-    arr[i];
-    Math.round(Math.random()*100);
+console.log("example sumAll():");
+function sumAll(arr) {
+    let sum = 0;
+    arr.forEach(function(val, i){
+        sum += val;
+    })
+    return sum;
 }
+// console.log(sumAll([10, 12, 14, 16]));
+var arr = [10, 20, 30, 40, 50]
+console.log(arr);
+console.log('sumAll =');
+console.log(sumAll(arr));
+console.log('\n');
+
+console.log("example print (val, i):");
+console.log(arr);
+arr.forEach(function(val, i) {
+    console.log(val, i);
+})
+console.log('\n');
+
+console.log("example tickets overbooked:");
+var arr = [1, 2, '3', 4, 'c', 6, 7]
+console.log(arr);
+arr.forEach(function(val, i) {
+    if (i < 5) {
+        console.log('Reserved');
+    } else {
+        console.log('Overbooked');
+    }
+    // console.log(val, i);
+})
+console.log('\n');
+
+console.log("example full up an empty array:");
+//(0:25:) 2nd vid
+var arr = [];
+for (let i = 0; i < 5; i++){
+    arr[i] =
+    Math.round(Math.random()*100);
+    // console.log(arrR);
+    // return arrR;
+}
+console.log(arr);
+
+var sum = 0;
+arr.forEach(function(val){
+    sum += val;
+})
+console.log('Sum af array:')
+console.log(sum);
+console.log('\n');
+
+console.log("example print 'test' for every arrays value:");
+arr.forEach(function(){
+    console.log('test');
+})
+console.log('\n');
+
+console.log("example print arrays value:");
+arr.forEach(function(val, i){
+    console.log('Print ' + i, val);
+})
+console.log('\n');
+
 
 //map
 
