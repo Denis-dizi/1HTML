@@ -374,6 +374,22 @@ console.log(arr3);
 console.groupEnd();
 console.log('\n');
 
+
+// = = = = = = = arrow functions ES6 = = = = = = =  
+// (1:06:)
+console.log('Arrow function');
+// let customFn = () => {
+//     Do something
+// }
+console.log('let customFn = () => { Do something }');
+console.log('\n');
+
+console.log('Old style:');
+console.log('arr.forEach(function(){ });');
+console.log('New style:');
+console.log('arr.forEach(()=>{ });');
+console.log('\n');
+
 // = = = = = = = = = CheckUp = = = = = = = = = 
 console.group('CheckUP');
 console.log('checkUp');
