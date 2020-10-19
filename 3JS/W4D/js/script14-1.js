@@ -386,16 +386,59 @@ console.log('\n');
 // }, 1000);
 // https://www.codegrepper.com/code-examples/javascript/Javascript+Call+Function+Every+Second
 
+//1. create a loop that prints every second number starting from 10 and ending with 20
+console.log('1. loop that prints every second number from 10 to 20:')
 for (let i = 10; i < 21; i+=2) {
     console.log('Nr' + i)
 }
+console.log('\n');
 
 
-var array = [true, true, false, true];
+//2. loop thru an array and print out it's content
+console.log('2. loop thru an array and print out it\'s content:');
+var array = [true, "trulala", false, true];
+console.log(array);
 
 for (let i = 0; i < array.length; i++) {
     console.log(array[i])
 }
+console.log('\n');
+
+//3. modify array of numbers by multiplying the numbers by itself
+console.log('3. modify array of numbers by multiplying the numbers by itself');
+var arr = [0, 1, 2, 3, 4, 6];
+var arr1 = arr.map(function(val, i){
+    return val ** 2;
+})
+console.log('arr =');
+console.log(arr);
+console.log('arr1 =');
+console.log(arr1);
+console.log('\n');
+
+// Declare a function that can be called even if it's defined after it is called
+
+
+// define a function that can be called only after it has been declared
+
+
+// create an arrow function with two or more parameters
+
+
+// create a function with unknown amount of parameters
+
+
+// create a function that accepts object as an parameters and reads assigns it's key/value pairs to function variables
+
+
+// Use two of built in prototype functions
+
+
+// Create your own prototype
+// create new instance
+// call a function from it
+
+
 
 
 console.groupEnd();
