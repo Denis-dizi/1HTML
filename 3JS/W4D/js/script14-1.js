@@ -320,13 +320,65 @@ console.log("example print arrays value:");
 arr.forEach(function(val, i){
     console.log('Print ' + i, val);
 })
+console.log(' = = = = = = = = = = = = = =');console.log('\n');
+
+
+//Map. only for arrays
+//(0:38:) 2nd vid
+console.log("Map. only for arrays\n(modifies it self, not modifies orig arr).");
 console.log('\n');
 
+var arr = [1, 2, 3, 4, 5];
+console.log(arr);
+arr.map(function(val, i){
+    console.log(val + 1);
+    return val + 1;
+    // console.log(val);
+})
+console.log(arr);
+console.log('\n');
 
-//map
+console.log("example save as new arr1:");
+var arr1 = arr.map(function(val, i){
+    // console.log(val + val * 0.1);
+    return val + val * 0.1;
+    // return val + 1;
+    // console.log(val);
+    // console.log(arr1);
+    // return arr1;
+})
+console.log('arr1 =');
+console.log(arr1);
+console.log('\n');
 
+console.log("example add different percentage");
+console.log(arr);
+var arr2 = arr.map(function(val, i){
+    if (val < 3) {
+        // console.log(val + val * 0.2);
+        return val + val * 0.2;
+    }
+    // console.log(val + val * 0.1);
+    return val + val * 0.1;
+    // console.log(val);
+})
+console.log(arr2);
+console.log('\n');
 
-// CheckUp
+console.log('arr.filter():');
+var arr3 = arr2.filter(function(val) {
+    return val < 4;
+})
+console.log(arr3);
+
+console.groupEnd();
+console.log('\n');
+
+// = = = = = = = = = CheckUp = = = = = = = = = 
+console.group('CheckUP');
+console.log('checkUp');
+console.log('\n');
+
 
 // setInterval(for (let i = 10; i < 21; i++)) {
 //     console.log('Hello Nr' + i)
