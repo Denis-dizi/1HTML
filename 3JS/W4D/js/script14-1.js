@@ -545,8 +545,43 @@ console.log(myFun3.toString());
 console.log('myFun3(); =');
 console.log(myFun3());
 
+console.groupEnd();
+console.log('\n');
 
+// = = = = = = Passing multiple parameters with "...rest" = = = = 
+// (1:14:)
+console.group('Passing multiple parameters with "...rest"');
 
+function myFn(a, b, c, sdf, df, m) {
+    console.log(a, b, c, sdf, df, m);
+}
+console.log(myFn.toString());
+console.log('myFn(1, 2, 3); =');
+console.log(myFn(1, 2, 3));
+console.log('\n');
+
+function mySum(a, b) {
+    return a + b; 
+}
+console.log(mySum.toString());
+console.log('mySum(2, 3); = ');
+console.log(mySum(2, 3));
+console.log('parametrs not definet in function are ignored:');
+console.log('mySum(2, 3, 4, 6) =');
+console.log(mySum(2, 3, 4, 6));
+console.log('\n');
+
+function mySum3(a, b,...rest) {
+    let sum = a + b;
+    console.log(a, b, rest);
+    rest.forEach((val) => {
+        sum += val;
+    })
+    return sum;
+}
+console.log(mySum3.toString());
+console.log('mySum3 (2, 3, 4, 6, 9, 7) =');
+console.log(mySum3(2, 3, 4, 6, 9, 7));
 
 console.groupEnd();
 console.log('\n');
