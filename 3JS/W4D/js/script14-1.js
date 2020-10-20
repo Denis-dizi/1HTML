@@ -518,6 +518,39 @@ console.log(xCnst.toString());
 console.groupEnd();
 console.log('\n');
 
+// = = = = = = visible/unvisible function 
+//(1:09:)
+console.group('visible/unvisible function');
+
+console.log('myFun1(); =');
+console.log(myFun1());
+console.log('myFun2(); - returns: "myFun2 is not defined"');
+console.log('function definition by function:')
+function myFun1() {
+    console.log('I\'m visible myFun1');
+    function myFun2() {
+        console.log('Not visible');
+    } 
+}
+console.log(myFun1.toString());
+console.log('\n');
+
+console.log('function definition by variable:')
+console.log('myFun3(); - returns: Cannot access \'myFun3\' before initialization.\nBecause variable is called before function is defined.');
+console.log('const myFun3 =');
+const myFun3 = function () {
+    console.log('I\'m myFun3');
+}
+console.log(myFun3.toString());
+console.log('myFun3(); =');
+console.log(myFun3());
+
+
+
+
+console.groupEnd();
+console.log('\n');
+
 // = = = = = = = = = CheckUp = = = = = = = = = 
 console.group('CheckUP');
 console.log('checkUp');
