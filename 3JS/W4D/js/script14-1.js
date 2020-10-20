@@ -615,7 +615,59 @@ let myData = (params) => {
 myData({name: 'Ed', surname: 'Pūce', isActive:true});
 console.log(myData.toString());
 
+console.groupEnd();
+console.log('\n');
 
+// = = = = = = = JS prototypes  = = = = = = = = = 
+// (1:35:)
+console.group('JS prototypes');
+
+let date1 = new Date();
+console.log(date1.getMinutes());
+console.log(date1.getSeconds());
+console.log('\n');
+
+let date2 = new Date();
+console.log(date2.getMinutes());
+console.log(date2.getSeconds());
+console.log('\n');
+
+function User(name, lastName) {
+    this.name = name;
+    this.lastName = lastName;
+    this.printFullName = function() {
+        return this.name + " " + this.lastName
+    }
+}
+
+const user1 = new User ("Edd", "Eddy");
+const user2 = new User ("Bob", "Body", false);
+const user3 = new User ("Jim", "Cart", true);
+console.log(user1);
+console.log(user1.name);
+console.log(user1.lastName);
+console.log(user1.printFullName());
+console.log('\n');
+
+console.log(user2.name);
+console.log(user2.lastName);
+console.log(user2.printFullName());
+console.log('\n');
+
+function User(name, lastName, isAdmin) {
+    this.name = name;
+    this.lastName = lastName;
+    this.isAdmin = isAdmin;
+    this.printFullName = function() {
+        return this.name + " " + this.lastName
+    }
+    this.canAcces = function() {
+        this.isAdmin ? console.log("You are admin") : console.log("Can't acces")
+    }
+}
+console.log(user1.canAcces());
+console.log(user2.canAcces());
+console.log(user3.canAcces());
 
 console.groupEnd();
 console.log('\n');
