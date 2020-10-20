@@ -682,25 +682,15 @@ console.log(user3.canAcces());
 console.groupEnd();
 console.log('\n');
 
+
 // = = = = = = = = = CheckUp = = = = = = = = = 
-console.group('CheckUP');
-console.log('checkUp');
-console.log('\n');
-
-
-// setInterval(for (let i = 10; i < 21; i++)) {
-//     console.log('Hello Nr' + i)
-// //     setTimeout(1000);
-// }, 1000);
-// https://www.codegrepper.com/code-examples/javascript/Javascript+Call+Function+Every+Second
-
+console.group('Checkup');
 //1. create a loop that prints every second number starting from 10 and ending with 20
 console.log('1. loop that prints every second number from 10 to 20:')
 for (let i = 10; i < 21; i+=2) {
-    console.log('Nr' + i)
+    console.log('Nr. ' + i);
 }
 console.log('\n');
-
 
 //2. loop thru an array and print out it's content
 console.log('2. loop thru an array and print out it\'s content:');
@@ -713,40 +703,108 @@ for (let i = 0; i < array.length; i++) {
 console.log('\n');
 
 //3. modify array of numbers by multiplying the numbers by itself
-console.log('3. modify array of numbers by multiplying the numbers by itself');
+console.log('3. modify array of numbers by multiplying the numbers by itself:');
 var arr = [0, 1, 2, 3, 4, 6];
 var arr1 = arr.map(function(val, i){
     return val ** 2;
 })
 console.log('arr =');
 console.log(arr);
+console.log(arr.map.toString());
 console.log('arr1 =');
 console.log(arr1);
 console.log('\n');
 
-// Declare a function that can be called even if it's defined after it is called
+//4. Declare a function that can be called even if it's defined after it is called
+console.log('4. Declare a function that can be called even if it\'s defined after it is called:');
 
+console.log('myFun1(); =');
+console.log(myFun1());
+console.log('function definition by function:')
+function myFun1() {
+    console.log('I\'m visible myFun1');
+}
+console.log(myFun1.toString());
 
-// define a function that can be called only after it has been declared
+console.log('\n');
 
+//5. define a function that can be called only after it has been declared
+console.log('5. define a function that can be called only after it has been declared:');
 
-// create an arrow function with two or more parameters
+console.log('function definition by variable:')
+console.log('myFun30(); - returns: Cannot access \'myFun30\' before initialization.\nBecause variable is called before function is defined.');
+console.log('const myFun30 =');
+const myFun30 = function () {
+    console.log('I\'m myFun30');
+}
+console.log(myFun30.toString());
+console.log('myFun30(); =');
+console.log(myFun30());
 
+console.log('\n');
 
-// create a function with unknown amount of parameters
+//6. create an arrow function with two or more parameters
+console.log('6. create an arrow function with two or more parameters:');
+console.log('const tsk6 = ');
+const tsk6 = (a, b, c) => {return a + b * c};
+console.log(tsk6.toString());
+console.log('tsk6(2, 4, 5); =');
+console.log(tsk6(2, 4, 5));
 
+console.log('\n');
 
-// create a function that accepts object as an parameters and reads assigns it's key/value pairs to function variables
+//7. create a function with unknown amount of parameters
+console.log('7. create a function with unknown amount of parameters:');
+function mySum3(a, b,...rest) {
+    let sum = a + b;
+    rest.forEach((val) => {
+        sum += val;
+    })
+    return sum;
+}
+console.log(mySum3.toString());
+console.log('mySum3 (2, 3, 4, 6, 9, 7) =');
+console.log(mySum3(2, 3, 4, 6, 9, 7));
 
+console.log('\n');
 
-// Use two of built in prototype functions
+//8. create a function that accepts object as an parameters and reads assigns it's key/value pairs to function variables
+console.log('8. create a function that accepts object as an parameters and reads assigns it\'s key/value pairs to function variables:');
 
+let myData1 = (params) => {
+    const {name, surname} = params;
+    console.log(name + " " + surname);
+}
+console.log('let myData1 = ');
+console.log(myData1.toString());
+myData1({name: 'Bendzh', surname: 'Frankl'});
 
-// Create your own prototype
-// create new instance
-// call a function from it
+console.log('\n');
 
+//9. Use two of built in prototype functions
+console.log('9. Use two of built in prototype functions:');
+console.log('?????????');
+console.log('\n');
 
+//10. Create your own prototype
+console.log('10. Create your own prototype.');
+//10.1. create new instance
+console.log('10.1. create new instance:');
 
+function Userr(name, lastName) {
+    this.name = name;
+    this.lastName = lastName;
+    this.printFullName = function() {
+        return this.name + " " + this.lastName
+    }
+}
+console.log(Userr);
+//10.2. call a function from it
+console.log('10.2. call a function from it:');
+
+const user10 = new Userr ("Nils", "Bor");
+console.log(user10.name);
+console.log(user10.lastName);
+console.log(user10.printFullName());
 
 console.groupEnd();
