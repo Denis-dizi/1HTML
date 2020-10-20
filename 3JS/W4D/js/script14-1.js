@@ -325,55 +325,139 @@ console.log(' = = = = = = = = = = = = = =');console.log('\n');
 
 //Map. only for arrays
 //(0:38:) 2nd vid
-console.log("Map. only for arrays\n(modifies it self, not modifies orig arr).");
+console.log("Map. \nonly for arrays\n(modifies it self, not modifies orig arr).");
 console.log('\n');
 
 var arr = [1, 2, 3, 4, 5];
+console.log('arr =');
 console.log(arr);
 arr.map(function(val, i){
     console.log(val + 1);
     return val + 1;
-    // console.log(val);
 })
 console.log(arr);
 console.log('\n');
 
-console.log("example save as new arr1:");
+console.log("save as new arr1:");
 var arr1 = arr.map(function(val, i){
-    // console.log(val + val * 0.1);
     return val + val * 0.1;
-    // return val + 1;
-    // console.log(val);
-    // console.log(arr1);
-    // return arr1;
+    // return val * 1.1; //why not val*1.1?????
 })
-console.log('arr1 =');
+console.log('arr1 = arr * 1.1 =');
 console.log(arr1);
 console.log('\n');
 
-console.log("example add different percentage");
+console.log("add different percentage if (val < 3):");
+console.log('arr =');
 console.log(arr);
 var arr2 = arr.map(function(val, i){
     if (val < 3) {
-        // console.log(val + val * 0.2);
         return val + val * 0.2;
     }
-    // console.log(val + val * 0.1);
     return val + val * 0.1;
-    // console.log(val);
 })
+console.log('arr2 =');
 console.log(arr2);
 console.log('\n');
 
-console.log('arr.filter():');
-var arr3 = arr2.filter(function(val) {
+console.log("without second return:");
+console.log('arr =');
+console.log(arr);
+var arr3 = arr.map(function(val, i){
+    if (val < 3) {
+        return val + val * 0.2;
+    }
+})
+console.log('arr3 =');
+console.log(arr3);
+console.log(' = = = = = = = = = = = = = =');console.log('\n');
+
+// = = = = Filter = = = = = 
+console.log('arr.filter()');
+console.log('arr.filter((){!!val}): - get only defined elements');
+var arr4 = arr3.filter(function(val) {
+    return !!val;
+})
+console.log(arr4);
+console.log('\n');
+
+console.log('arr.filter((){val < 4}):');
+var arr5 = arr2.filter(function(val) {
     return val < 4;
+})
+console.log(arr5);
+console.log('\n');
+
+console.log('Name filter:');
+var arr = ["Ed", "Jan", "Jim", "Bim", "Jan"]
+console.log('arr = ');
+console.log(arr);
+console.log('New array. Filtred by name Jan:');
+var arr = arr.filter(function(val) {
+    return val === "Jan";
+})
+console.log(arr);
+
+console.log('New arrays length:');
+var arr = arr.filter(function(val) {
+    return val === "Jan";
+}).length
+console.log(arr);
+
+console.log('New array with .map, get booleans:');
+// console.log('works in console, doesn\'t work in VSCode:');
+// console.log('https://forum.freecodecamp.org/t/map-is-suddenly-not-a-function/134196');
+var arr = ["Ed", "Jan", "Jim", "Bim", "Jan"]
+// arr.map(function(val) {
+//     return val === "Jan";
+// })
+console.log(arr);
+
+var arr1 = arr.map(function(val) {
+    return val === "Jan";
+})
+console.log(arr1);
+
+console.log('New array with .map, get booleans, filtred:');
+var arr = arr.map(function(val) {
+    return val === "Jan";
+}).filter(function(val) {
+    return val;
+})
+console.log(arr);
+console.log(' = = = = = = = = = = = = = =');console.log('\n');
+
+// = = = = = arr.find = = = = =
+//(0:54:)
+console.log('arr.find()\n - gets only first result from array');
+// arr.find(function(val) {
+//     return val === "Jan";
+// })
+// console.log(arr);
+
+console.log('arr.find in array with names:');
+arr = [{name: "Ed", lastName: "Pce"}, {name: "Jon", lastName: "Test"}, {name: "Io", lastName: "SnmIo"}]
+console.log(arr);
+console.log('.find by key:');
+var arr1 = arr.find(function(val) {
+    return val ["name"] === "Jon";
+})
+console.log(arr1);
+
+console.log('.find by key.lastName:');
+var arr2 = arr.find(function(val) {
+    return val ["name"] === "Ed";
+}).lastName
+console.log(arr2);
+
+console.log('.find by index:');
+var arr3 = arr.find(function(val, i) {
+    return i === 2;
 })
 console.log(arr3);
 
 console.groupEnd();
 console.log('\n');
-
 
 // = = = = = = = arrow functions ES6 = = = = = = =  
 // (1:06:)
