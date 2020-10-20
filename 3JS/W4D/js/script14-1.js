@@ -586,6 +586,40 @@ console.log(mySum3(2, 3, 4, 6, 9, 7));
 console.groupEnd();
 console.log('\n');
 
+// = = = = = = Reading parameters from object = = = = 
+// (1:22:)
+console.group('Reading parameters from object');
+
+//????????????? Doesn't work
+// const usr = {name: "Ed", lastName: "Surname", age: 23}
+// function user (params) {
+//     const {name, lastName, age} = params;
+//     //The same is:
+//     // const name = params.name;
+//     // const lastName = params.lastName;
+//     // const age = params.age;
+
+//     console.log(name + " " + lastName);
+//     console.log(name);
+//     // return (name + " " + lastName);
+//     return name;
+// }
+// console.log('\n');
+
+let myData = (params) => {
+    const {name, surname, isActive} = params;
+    console.log(name)
+    console.log(surname)
+    console.log(isActive)
+}
+myData({name: 'Ed', surname: 'Pūce', isActive:true});
+console.log(myData.toString());
+
+
+
+console.groupEnd();
+console.log('\n');
+
 // = = = = = = = = = CheckUp = = = = = = = = = 
 console.group('CheckUP');
 console.log('checkUp');
