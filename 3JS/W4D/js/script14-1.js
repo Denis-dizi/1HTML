@@ -463,8 +463,18 @@ console.log('\n');
 // = = = = = = = Anonymous/Declared functions = = = = = = = 
 //(1:00:)
 console.group('Anonymous/Declared, Arrow functions')
-console.log('=== Declared function:\nfunction functionName(parameters) { code to be executed }');
+console.log('Declared');
+function logArray (val, i) {
+    console.log(JSON.stringify(val) + " with index " + i);
+}
+console.log(arr);
+console.log(logArray.toString());
+console.log('arr.forEach(logArray); =');
+console.log(arr.forEach(logArray));
+console.log('\n');
+
 console.log('https://www.w3schools.com/js/js_function_definition.asp');
+console.log('=== Declared function:\nfunction functionName(parameters) { code to be executed }');
 function myFunc (a, b) {
     return a * b;
 }
