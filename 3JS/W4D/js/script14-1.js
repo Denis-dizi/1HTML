@@ -113,7 +113,7 @@ console.log('see *.js file');
 console.groupEnd();
 console.log('\n');
 
-// = = Date = =
+// = = = = = = Date = = = = = = 
 //(0:30:) 1st video
 console.group('Dates');
 console.log('Dates');
@@ -145,10 +145,10 @@ console.groupEnd();
 console.log('\n');
 
 // = = = = = = = LOOPS = = = = = = = = = = = = =
-console.group('Loops');
+console.group('Loops: For, While, forEach, Map. .filer, .find');
 // For loop
 //(0:20:) 1st video
-console.log('For loop');
+console.group('===== For');
 console.log('for (let i = 0; i < 6; i+=2) {\nconsole.log("Hello For loop 1");\n}; =');
 for (let i = 0; i < 6; i+=2) {
     console.log("Hello For loop 1");
@@ -204,11 +204,12 @@ console.log('str.length; =');
 console.log(str.length);
 console.log('str.length < 8; =');
 console.log(str.length < 8);
-console.log(' = = = = = = = = = = = = = =');console.log('\n');
+console.groupEnd();
+console.log('\n');
 
-//While loop
+// = = = = = = = = While loop
 //(0:00:) 2nd vid
-console.log('While loop');
+console.group('===== While');
 var j = 0;
 while (j < 0.5){
     console.log(j);
@@ -228,11 +229,12 @@ while (i > 0) {
     console.log('Hello Nr' + i)
     i--
 }
-console.log(' = = = = = = = = = = = = = =');console.log('\n');
+console.groupEnd();
+console.log('\n');
 
-//For each. only for arrays
+// = = = = = = = = For each. only for arrays
 //(0:12:) 2nd vid
-console.log("forEach. only for arrays");
+console.log("===== forEach.\nonly for arrays");
 console.log('\n');
 
 console.log("example with index:");
@@ -320,12 +322,12 @@ console.log("example print arrays value:");
 arr.forEach(function(val, i){
     console.log('Print ' + i, val);
 })
-console.log(' = = = = = = = = = = = = = =');console.log('\n');
+console.log('\n');
 
 
-//Map. only for arrays
+//= = = = = = = Map. only for arrays
 //(0:38:) 2nd vid
-console.log("Map. \nonly for arrays\n(modifies it self, not modifies orig arr).");
+console.log("===== Map. \nonly for arrays\n(modifies it self, not modifies orig arr).");
 console.log('\n');
 
 var arr = [1, 2, 3, 4, 5];
@@ -370,10 +372,10 @@ var arr3 = arr.map(function(val, i){
 })
 console.log('arr3 =');
 console.log(arr3);
-console.log(' = = = = = = = = = = = = = =');console.log('\n');
+console.log('\n');
 
 // = = = = Filter = = = = = 
-console.log('arr.filter()');
+console.log('===== arr.filter()');
 console.log('arr.filter((){!!val}): - get only defined elements');
 var arr4 = arr3.filter(function(val) {
     return !!val;
@@ -425,11 +427,11 @@ var arr = arr.map(function(val) {
     return val;
 })
 console.log(arr);
-console.log(' = = = = = = = = = = = = = =');console.log('\n');
+console.log('\n');
 
 // = = = = = arr.find = = = = =
 //(0:54:)
-console.log('arr.find()\n - gets only first result from array');
+console.log('===== arr.find()\n - gets only first result from array');
 // arr.find(function(val) {
 //     return val === "Jan";
 // })
@@ -455,23 +457,65 @@ var arr3 = arr.find(function(val, i) {
     return i === 2;
 })
 console.log(arr3);
-
 console.groupEnd();
+console.log('\n');
+
+// = = = = = = = Anonymous/Declared functions = = = = = = = 
+//(1:00:)
+console.group('Anonymous/Declared, Arrow functions')
+console.log('=== Declared function:\nfunction functionName(parameters) { code to be executed }');
+console.log('https://www.w3schools.com/js/js_function_definition.asp');
+function myFunc (a, b) {
+    return a * b;
+}
+document.getElementById("funcDeclar").innerHTML = myFunc.toString();
+console.log(myFunc.toString());
+console.log('myFunc(3, 5); =');
+console.log(myFunc(3, 5));
+console.log('\n');
+
+console.log('=== Anonymous function:\nvar anFunc = ')
+var anFunc = function (a, b) {
+    return a ** b;
+}
+// console.log(anFunc);
+console.log(anFunc.toString());
+console.log('anFunc(3, 2); =');
+console.log(anFunc(3, 2));
+console.log('\n');
+
+console.log('Return variable where the function stored in:\nvar x = ');
+var x = function (a, b) {return a * b};
+console.log(x);
+console.log('Return variable where the function stored in as a string:\nx.toString() = ');
+console.log(x.toString());
 console.log('\n');
 
 // = = = = = = = arrow functions ES6 = = = = = = =  
 // (1:06:)
-console.log('Arrow function');
+console.log('=== Arrow function');
 // let customFn = () => {
 //     Do something
 // }
 console.log('let customFn = () => { Do something }');
 console.log('\n');
 
-console.log('Old style:');
+console.log('Old style ES5:');
 console.log('arr.forEach(function(){ });');
-console.log('New style:');
+console.log('New style ES6:');
 console.log('arr.forEach(()=>{ });');
+console.log('\n');
+
+console.log('Old style ES5:\nvar x =');
+var x = function(x, y) {
+    return x * y;
+}
+console.log(x.toString());
+console.log('New style ES6:\nconst xCnst =');
+const xCnst = (x, y) => { return x * y };
+console.log(xCnst.toString());
+
+console.groupEnd();
 console.log('\n');
 
 // = = = = = = = = = CheckUp = = = = = = = = = 
