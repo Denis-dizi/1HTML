@@ -4,7 +4,7 @@
 
 //Repeat W4D2 data types:
 //(0:07:) 1st video
-console.group('repeat data types')
+console.group('repeat W4D2. JS data types.')
 console.log('Boolean. False, True values:');
 console.log('falsely - 0, \'\' (empty string), null, undefined, NaN');
 console.log('truly - not empty strings, all numbers except zero, arrays, objects, functions, etc.');
@@ -146,6 +146,7 @@ console.log('\n');
 
 // = = = = = = = LOOPS = = = = = = = = = = = = =
 console.group('Loops: For, While, forEach, Map. .filer, .find');
+console.log('https://www.freecodecamp.org/news/javascript-loop-tutorial-how-to-iterate-over-an-array-in-javascript/');
 // For loop
 //(0:20:) 1st video
 console.group('===== For');
