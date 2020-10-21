@@ -1,4 +1,30 @@
+window.addEventListener('load', function() {
+    document.getElementById('save-btn')
+    .addEventListener('click', () => {
+        const form = document.getElementById('user-form').elements;     
+        // validation:
+        if (isFormValid(form)) {
+            console.log('can be saved')
+        }else{
+            console.log('form not valid')
+        }
+    })
+console.log('loader')
+    
+    // validation:
+function isFormValid(form) {
+    let isFormValid = true;
 
+    const username = form.namedItem('username').value;
+    if (username.length < 6)
+        isFormValid = false;
+
+    console.log(username);
+    return isFormValid;
+
+}
+
+})
 
 // document.getElementById("saveName").addEventListener("click", function() {
 //     const nameInput = document.getElementsByClassName('name')[0];
