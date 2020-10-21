@@ -4,15 +4,32 @@ window.addEventListener('load', function() {
         const form = document.getElementById('user-form').elements;     
         // validation:
         if (isFormValid(form)) {
+            let userList = localStorage.userList;
+
+            if (userList) {
+                userList = JSON.parse(userList);
+                } else{
+                    userList = [];
+                }   
+
+            const user = {
+                username: form.namedItem('username').value,
+                email: form.namedItem('email').value
+            };
+
+
+            userList.push(JSON.stringify(user));
+            localStorage.userList = JSON.stringify(userList);
+
             console.log('can be saved')
-        }else{
-            console.log('form not valid')
-        }
+            }else{
+                console.log('form not valid')
+            }
     })
-console.log('loader')
+    console.log('loader')
     
     // validation:
-function isFormValid(form) {
+    function isFormValid(form) {
     let isFormValid = true;
 
     const errorMsgBlock =  document.getElementsByClassName('error-msg');
@@ -22,7 +39,7 @@ function isFormValid(form) {
 
 
     const username = form.namedItem('username').value;
-    if (username.length < 6){
+    if (username.length < 6) {
         const errorMsg =  document.getElementsByClassName('error-msg username')[0];
         errorMsg.innerHTML = "Min 6 characters for username"
         isFormValid = false;
@@ -35,56 +52,55 @@ function isFormValid(form) {
         const errorMsg =  document.getElementsByClassName('error-msg email')[0];
         errorMsg.innerHTML = "Not a valid email"
         isFormValid = false;
-
     }
 
     console.log(username);
+    console.log(email);
     return isFormValid;
 
 }
 
+
+function renderTable() {
+
+    const table = document.getElementById("userTable");
+    // const userList = JSON.parse(localStorage.userList);
+    const userList = localStorage.userList ? JSON.parse(localStorage.userList) : [];
+
+    userList.forEach(function(user) {
+        user = JSON.parse(user)
+        table.innerHTML += `
+        <tr>
+            <td>`+ user.username +`</td>
+            <td>`+ user.email +`</td>
+            <td>
+                <button class = "edit-btn" user-id = `+ index +` >Edit</button>
+                <button class = "delete-btn" user-id = `+ index +`>Delete</button>
+            </td>
+        </tr>`;
+    })
+
+    const editBtns = document.getElementsByClassName('edit-btn');
+    
+    Object.values(editBtns).forEach(function(btn) {
+        btn.addEventListener('click', function(event){
+            const userId = event.target.getAttribute('user-id');
+            console.log('Trigger edit user: ' + userId);
+
+            const userList = JSON.parse(localStorage.userList);
+            let user = userList[userId];
+            user = JSON.parse(user);
+
+            const form = document.getElementById('user-form').elements;     
+
+            form.namedItem('username').value = user.username
+            form.namedItem('email').value = user.email
+            form.namedItem('user-id').value = userId
+
+            console.log(user)
+        })
+    })
+}
+renderTable();
+
 })
-
-// document.getElementById("saveName").addEventListener("click", function() {
-//     const nameInput = document.getElementsByClassName('name')[0];
-//     // console.log('click');
-//     // console.log(nameInput);
-//     console.log(nameInput.value);
-
-//     let users = localStorage.users;
-
-//     if (users) {
-//         users = users.split(",");
-//         users.push(nameInput.value);
-
-//     } else {
-//         console.log("no users");
-//         users = [];
-//         users.push(nameInput.value);
-//         console.log(users);
-//     }
-
-//     localStorage.users = users.toString();
-//     renderTable();
-// });
-
-// function renderTable() {
-
-//     table = document.getElementsByClassName("userTable")[0];
-//     table.innerHTML = '';
-
-//     const usersArray = localStorage.users.split(",");
-
-//     usersArray.forEach(function(name) {            
-//         table.innerHTML += '<tr><td>'+ name +'</td></tr>';
-//     })
-//     }
-//     renderTable();
-
-// const usersArray = localStorage.users.split(",");
-// usersArray.forEach(function(name) {
-//     table = document.getElementsByClassName("userTable")[0];
-
-//     console.log(table);
-//     table.innerHtml += '<tr><td>'+ name +'</td></tr>';
-// });
