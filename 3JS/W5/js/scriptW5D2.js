@@ -1,38 +1,40 @@
-document.getElementById("saveName").addEventListener("click", function() {
-    const nameInput = document.getElementsByClassName('name')[0];
-    // console.log('click');
-    // console.log(nameInput);
-    console.log(nameInput.value);
 
-    let users = localStorage.users;
 
-    if (users) {
-        users = users.split(",");
-        users.push(nameInput.value);
+// document.getElementById("saveName").addEventListener("click", function() {
+//     const nameInput = document.getElementsByClassName('name')[0];
+//     // console.log('click');
+//     // console.log(nameInput);
+//     console.log(nameInput.value);
 
-    } else {
-        console.log("no users");
-        users = [];
-        users.push(nameInput.value);
-        console.log(users);
-    }
+//     let users = localStorage.users;
 
-    localStorage.users = users.toString();
-    renderTable();
-});
+//     if (users) {
+//         users = users.split(",");
+//         users.push(nameInput.value);
 
-function renderTable() {
+//     } else {
+//         console.log("no users");
+//         users = [];
+//         users.push(nameInput.value);
+//         console.log(users);
+//     }
 
-    table = document.getElementsByClassName("userTable")[0];
-    table.innerHTML = '';
+//     localStorage.users = users.toString();
+//     renderTable();
+// });
 
-    const usersArray = localStorage.users.split(",");
+// function renderTable() {
 
-    usersArray.forEach(function(name) {            
-        table.innerHTML += '<tr><td>'+ name +'</td></tr>';
-    })
-    }
-    renderTable();
+//     table = document.getElementsByClassName("userTable")[0];
+//     table.innerHTML = '';
+
+//     const usersArray = localStorage.users.split(",");
+
+//     usersArray.forEach(function(name) {            
+//         table.innerHTML += '<tr><td>'+ name +'</td></tr>';
+//     })
+//     }
+//     renderTable();
 
 // const usersArray = localStorage.users.split(",");
 // usersArray.forEach(function(name) {

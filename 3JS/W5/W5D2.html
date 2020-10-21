@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>W5D2. Local Storage</title>
         <link rel="stylesheet" href="css/W5D2.css">
+        <script src="js/scriptW5D2.js"></script>
     </head>
 
 
@@ -13,19 +14,42 @@
         <input id = "name"> -->
 
         <!-- <label for = "checkbox" id = "checkbox"></label> -->
-        <label>
+
+
+        <!-- <label>
             Name2:
 
             <input class="name">
         </label>
         <button id="saveName">Save name to local storage</button>
 
-<table class = "userTable">
+    <table class = "userTable"> -->
+    <!-- </table> -->
 
-</table>
+        <form id="user-form" novalidate>
+            <div class="input-wrapper">
+                <label>
+                    Username:
+                    <input name="username">
+                </label>
+                <div class="error-msg username">Test error</div>
+            </div>
+
+            <div class="input-wrapper">
+                <label>
+                    Email:
+                    <input type="email" name="email">
+                    <!-- <input type="number" step="0.1" name="email"> -->
+                </label>
+                <div class="error-msg email">Test error</div>
+            </div>
+            <button type="button" id="save-btn">Save</button>
+
+        </form>
+
 
     </body>
 
-    <script src="js/scriptW5D2.js"></script>
+    
     
 </html>
