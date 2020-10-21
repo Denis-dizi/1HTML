@@ -27,16 +27,67 @@
             <li>Create the HTML (css if needed) and add three different event listeners to created HTML</li>
         </ol>
 
-        <h4>Retrieve the domain name</h4>
+        <h4>1. Retrieve the domain name</h4>
         <p id="winLoc"></p>
-        <p>Window Location <a href="https://www.w3schools.com/js/js_window_location.asp" target="_blank" rel="noopener noreferrer">Link</a></p>   
+        <p>JS Window Location <a href="https://www.w3schools.com/js/js_window_location.asp" target="_blank" rel="noopener noreferrer">Link@W3</a></p>  
+        <ul>
+            <li><code class="w3-codespan">window.location.href</code> returns the href (URL) of the current page</li>
+            <li><code class="w3-codespan">window.location.hostname</code> returns the domain name of the web host</li>
+            <li><code class="w3-codespan">window.location.pathname</code> returns the path and filename of the current page</li>
+            <li><code class="w3-codespan">window.location.protocol</code> returns the web protocol used (http: or https:)</li>
+            <li><code class="w3-codespan">window.location.assign()</code> loads a new document</li>
+          </ul>
+          <p class="intro">The <code class="w3-codespan">window.location</code> object can be used to get 
+            the current page address (URL) and to redirect the browser to a new page.</p>
 
+        <h4>2. Save and then retrieve some data with localStorage</h4>
+        <p id="locStor"></p>
+        <p>HTML Web Storage API <a href="https://www.w3schools.com/html/html5_webstorage.asp" target="_blank" rel="noopener noreferrer">Link@W3</a><br>
+        LocalStorage, sessionStorage <a href="https://javascript.info/localstorage" target="_blank" rel="noopener noreferrer">javascript.info</a>
+        </p>
+
+        <!-- <form action="/action_page.php">
+            <label for="textAr">Textarea field:</label><br>
+            <textarea 
+                id="textAr" 
+                name="textAr" 
+                rows="3" cols="40" 
+                placeholder="textarea field that “autosaves” its value on every change.">
+            </textarea>
+              <br><br>
+              <input type="submit" value="Submit">
+        </form> -->
+
+        <label for="textAr">Labled textarea field:</label><br>
+        <textarea
+        id="textAr"
+        class = "textAr"
+        name='textAr'
+        rows="3" cols="40" 
+        placeholder="write here"
+        ></textarea><br>
+        Save data to local storage
+        <button id="saveData">Save</button>
 
 
     </body>
 
     <script>
-        document.getElementById("winLoc").innerHTML = 
-"The full URL of this page is:<br>" + window.location.href + "<br>" + window.location;
+        document.getElementById("winLoc").innerHTML = "The full URL of this page is:<br>" + window.location.href + "<br>" + window.location+ "<br>" + location;
+        // document.getElementById("locStor").innerHTML =
+        const nameInput = document.getElementsByClassName('textAr');
+        console.log(nameInput.value);
+        const nameInput1 = document.getElementById('textAr');
+        console.log(nameInput1.value);
+        // console.log(nameInput1());
+        console.log(nameInput1);
+
+        document.getElementById("saveData").addEventListener("click", function() {
+            const nameInput = document.getElementsByClassName('taxtArr')[0];
+            // console.log('click');
+            // console.log(nameInput);
+            console.log(nameInput.value);
+
+
     </script>
 </html>
