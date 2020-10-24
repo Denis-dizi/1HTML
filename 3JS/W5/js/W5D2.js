@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.addEventListener('load', function () {   //because of this comand script link could be placed in htlml head.
     document.getElementById('save-btn')
         .addEventListener('click', () => {
             const form = document.getElementById('user-form').elements;
@@ -32,11 +32,11 @@ window.addEventListener('load', function () {
     function isFormValid(form) {
         let isFormValid = true;
 
+        // refreshes error logs (1:20:)
         const errorMsgBlock = document.getElementsByClassName('error-msg');
         Object.values(errorMsgBlock).forEach(function (block) {
             block.innerHTML = ''
         })
-
 
         const username = form.namedItem('username').value;
         if (username.length < 6) {
@@ -46,9 +46,10 @@ window.addEventListener('load', function () {
         }
 
         const email = form.namedItem('email').value;
+        // re - regular expression comand
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-        if (!re.test()) {
+        if (!re.test(email)) {
             const errorMsg = document.getElementsByClassName('error-msg email')[0];
             errorMsg.innerHTML = "Not a valid email"
             isFormValid = false;
