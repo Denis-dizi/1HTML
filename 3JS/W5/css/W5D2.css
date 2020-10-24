@@ -14,7 +14,9 @@ input {
 }
 
 .error-msg {
-    height: 12px;
-    font-size: 10px;
+    /* height: 12px; */
+    height: 20px;
+    /* font-size: 10px; */
+    font-size: 15px;
     color: #aa0000;
 }
