@@ -6,46 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W5D2. Local Storage</title>
     <link rel="stylesheet" href="css/W5D2.css">
+    <link rel="stylesheet" href="/3JS/CSS/style_stnd_v3.css">
     <script src="js/W5D2.js"></script>
 </head>
 
 
 <body>
 
-    <form id="user-form" novalidate>
-        <div class="input-wrapper">
-            <label>
-                Username:
-                <input name="username">
-            </label>
-            <div class="error-msg username">Test user error</div>
-        </div>
+    <header>
+        <h1>Lecture W5D2</h1>
+        <h2>2020.10.21</h2>
+        <h2>// JS. Form, logic</h2>
+        <p><a target="_blank" href="https://denis-dizi.github.io/RCS2020/3JS/W5/W5D2.html" title="GitHub">Link</a> to
+            this page at GitHub</p>
+    </header>
 
-        <div class="input-wrapper">
-            <label>
-                Email:
-                <input type="email" name="email">
-                <!-- <input type="number" step="0.1" min="" max="" name="email"> -->
-            </label>
-            <div class="error-msg email">Test email error</div>
-        </div>
-        
-        <!-- (2:45:) -->
-        <input type="hidden" name="user-id">
-        
-        <button type="button" id="save-btn">Save</button>
+    <main>
+        <h3>Hit F12 key to see the JS code.</h3>
+        <!-- <h4></h4> -->
 
-    </form>
 
-    <!-- (1:46:/:56) -->
-    <table id="users-table">
-        <thead>
-            <td>Username</td>
-            <td>Email</td>
-        </thead>
-        <!-- (2:53:) -->
-        <tbody></tbody>
-    </table>
+        <form id="user-form" novalidate>
+            <div class="input-wrapper">
+                <label>
+                    Username:
+                    <input name="username">
+                </label>
+                <div class="error-msg username">Test user error</div>
+            </div>
+
+            <div class="input-wrapper">
+                <label>
+                    Email:
+                    <input type="email" name="email">
+                    <!-- <input type="number" step="0.1" min="" max="" name="email"> -->
+                </label>
+                <div class="error-msg email">Test email error</div>
+            </div>
+
+            <!-- (2:45:) -->
+            <input type="hidden" name="user-id">
+
+            <button type="button" id="save-btn">Save</button>
+
+        </form>
+
+        <!-- (1:46:/:56) -->
+        <table id="users-table">
+            <thead>
+                <td>Username</td>
+                <td>Email</td>
+            </thead>
+            <!-- (2:53:) -->
+            <tbody></tbody>
+        </table>
+
+        <footer>
+            <p>Use validator to check the code: <a target="_blank" href="https://validator.w3.org"> validator.w3.org
+                </a>
+            </p>
+        </footer>
+    </main>
 
 </body>
+
 </html>
