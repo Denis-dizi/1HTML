@@ -1,26 +1,31 @@
-window.addEventListener('load', function () {   //because of this comand script link could be placed in htlml head.
+window.addEventListener('load', function () { //because of this comand script link could be placed in htlml head.
     document.getElementById('save-btn')
         .addEventListener('click', () => {
             const form = document.getElementById('user-form').elements;
             // validation:
-            if (isFormValid(form)) {
+            if (isFormValid(form)) { //(1:26:) local  Storage
                 let userList = localStorage.userList;
 
                 if (userList) {
                     userList = JSON.parse(userList);
                 } else {
-                    userList = [];
+                    userList = []; // if no data, create new list
                 }
 
-                const user = {
+                const user = { //(1:33:)
                     username: form.namedItem('username').value,
                     email: form.namedItem('email').value
                 };
+                //(2:47)) push if empty, change if not empty
+                const userId = form.namedItem('user-id').value
+                if (userId) {
+                    userList[userId] = JSON.stringify(user);
+                } else {
+                    userList.push(JSON.stringify(user));
+                }
 
-
-                userList.push(JSON.stringify(user));
                 localStorage.userList = JSON.stringify(userList);
-
+                // renderTable();
                 console.log('can be saved')
             } else {
                 console.log('form not valid')
@@ -32,7 +37,7 @@ window.addEventListener('load', function () {   //because of this comand script 
     function isFormValid(form) {
         let isFormValid = true;
 
-        // refreshes error logs (1:20:)
+        // resets error alerts (1:20:)
         const errorMsgBlock = document.getElementsByClassName('error-msg');
         Object.values(errorMsgBlock).forEach(function (block) {
             block.innerHTML = ''
@@ -61,44 +66,46 @@ window.addEventListener('load', function () {   //because of this comand script 
 
     }
 
+    function renderTable() { //(1:40:)
 
-    function renderTable() {
-
-        const table = document.getElementById("userTable");
-        // const userList = JSON.parse(localStorage.userList);
+        const table = document.getElementById("user-table");
+        // const userList = JSON.parse(localStorage.userList); //(2:31:) changed
         const userList = localStorage.userList ? JSON.parse(localStorage.userList) : [];
 
-        userList.forEach(function (user) {
-            user = JSON.parse(user)
+        userList.forEach(function (user, index) { //(1:48:)
+            user = JSON.parse(user) // from string to object
             table.innerHTML += `
         <tr>
             <td>` + user.username + `</td>
             <td>` + user.email + `</td>
-            <td>
+            <td> 
                 <button class = "edit-btn" user-id = ` + index + ` >Edit</button>
                 <button class = "delete-btn" user-id = ` + index + `>Delete</button>
-            </td>
-        </tr>`;
+                </td>
+                </tr>`;
+            //(2:28:)
+            // <button class = "delete-btn" title = ` + index + `>Delete</button>
         })
-
+        //(2:21:)
         const editBtns = document.getElementsByClassName('edit-btn');
-
+        //(2:22:/26)
         Object.values(editBtns).forEach(function (btn) {
             btn.addEventListener('click', function (event) {
-                const userId = event.target.getAttribute('user-id');
+                const userId = event.target.getAttribute('user-id'); //gets index from button (2:26:)
                 console.log('Trigger edit user: ' + userId);
-
+                //(2:35:) by userId get user from localStorage
                 const userList = JSON.parse(localStorage.userList);
                 let user = userList[userId];
                 user = JSON.parse(user);
-
+                //(2:41:)
                 const form = document.getElementById('user-form').elements;
-
+                //(2:41:) to edit data from localStorage and send to form
                 form.namedItem('username').value = user.username
                 form.namedItem('email').value = user.email
+                //(2:50)
                 form.namedItem('user-id').value = userId
 
-                console.log(user)
+                console.log(user);
             })
         })
     }
