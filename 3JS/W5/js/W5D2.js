@@ -25,7 +25,7 @@ window.addEventListener('load', function () { //because of this comand script li
                 }
 
                 localStorage.userList = JSON.stringify(userList);
-                // renderTable();
+                renderTable();
                 console.log('can be saved')
             } else {
                 console.log('form not valid')
