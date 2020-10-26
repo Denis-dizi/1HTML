@@ -80,6 +80,7 @@ $(function () { // -short comand
     }
 
     function renderTable() {
+        console.trace();
         // const table = document.getElementById("users-table");
         // const tBody = table.getElementsByTagName('tbody')[0];
         const $tBody = $('#users-table').find('tbody');
@@ -88,9 +89,12 @@ $(function () { // -short comand
 
         const $trExample = $('.tr-example');
         $tBody.html('');
+        console.trace(userList);
 
         userList.forEach(function (user, index) {
-            const $newTr = $trExample.clone().show();
+            console.trace(user);
+
+            const $newTr = $trExample.first().clone().show();
             // $newTr.show();
             user = JSON.parse(user) // from string to object
 
@@ -98,6 +102,8 @@ $(function () { // -short comand
 
             $newTr.find('.username').text(user.username);
             $newTr.find('.email').text(user.email);
+            $newTr.find('.edit-btn').attr('user-id', index);
+            $newTr.find('.delete-btn').attr('user-id', index);
 
             // tBody.innerHTML += `
             $tBody.append($newTr);
@@ -151,7 +157,7 @@ $(function () { // -short comand
 
             const table = document.getElementById('users-table');
             const tBody = table.getElementsByTagName('tbody')[0];
-            const tRowToDelete = tBody.getElementsByTagName('tr')[userId];
+            const tRowTableDelete = tBody.getElementsByTagName('tr')[userId];
 
             tRowTableDelete.innerHTML = '';
         })
