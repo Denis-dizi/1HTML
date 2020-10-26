@@ -153,7 +153,7 @@ $(function () { // -short comand
             const tBody = table.getElementsByTagName('tbody')[0];
             const tRowToDelete = tBody.getElementsByTagName('tr')[userId];
 
-            tRowToDelete.innerHTML = '';
+            tRowTableDelete.innerHTML = '';
         })
         // })
     }
@@ -178,7 +178,7 @@ $(function () { // -short comand
             // $('.list').append('<li>'+ '<img src='+user.avatar.value> + " "+ user.email + '</li>');
             // '<img src="img/icons.png">'
         })
-    }  
+    }
 
     // (1:41:) Request to the server
     $.ajax({
