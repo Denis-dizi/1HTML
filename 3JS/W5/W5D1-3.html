@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>W5D1-3</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W5D1-3. DOM</title>
+    <link rel="stylesheet" href="/3JS/CSS/style_stnd_v3.css">
+</head>
 
 
-    <body>
+<body>
+    <header>
+        <h1>Lecture W5D1-3</h1>
+        <h2>2020.10.19</h2>
+        <h2>// DOM Objects </h2>
+        <p><a target="_blank" href="https://denis-dizi.github.io/RCS2020/3JS/W5/W5D1-3.html" title="GitHub">Link</a> to
+            this page at GitHub</p>
+    </header>
 
-        <h3><a id="user-content-checkup" class="anchor" aria-hidden="true" href="#checkup"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Checkup</h3>
+    <main>
+        <h3>Open Console by F12 key.</h3>
+        <!-- <h4></h4> -->
+        <p>Materials:
+        <ul>
+            <li><a href="https://github.com/epuce/web-bootcamp" target="_blank"
+                    rel="noopener noreferrer">https://github.com/epuce/web-bootcamp</a></li>
+            <li><a href="https://github.com/epuce/web-bootcamp/blob/master/W03L03%20-%20JavaScript%20DOM%20events%20&%20handling.md" target="_blank"
+                    rel="noopener noreferrer">https://github.com/epuce/web-bootcamp/.../DOM</a></li>
+            <!-- <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li> -->
+            <!-- <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li> -->
+        </ul>
+        </p>
+        
+        <!-- <p>Topic:
+            <ul>
+                <li>JavaScript data types</li>
+                <ol>
+                    <li>String</li>
+                    <li>Number</li>
+                    <li>NaN - Not a Number</li>
+                    <ul>
+                        <li>Convert String to Number</li>
+                    </ul>
+                    <li>Array</li>
+                    <ul>
+                        <li>.arr.lenght</li>
+                        <li>get arrays n-th element by index</li>
+                        <li>get arrays last element by index</li>
+                        <li>get arrays n-th element from nultyarray</li>
+                        <li>arr.indexOf();</li>
+                    </ul>
+                    <li>Object</li>
+                    <ul>
+                        <li>get objects n-th element by key</li>
+                        <li>object example: user{};</li>
+                        <li>concatenate</li>
+                    </ul>
+                </ol>
+            </ul>
+        </p> -->
+        <br>
+
+        <h3><a id="user-content-checkup" class="anchor" aria-hidden="true" href="#checkup"><svg
+                    class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+                    </path>
+                </svg></a>Checkup</h3>
 
         <ol>
             <li>Retrieve the domain name</li>
@@ -17,33 +75,40 @@
             <li>Add some cookies</li>
             <li>Create a list, loop thru the list elements and add a class to each of the list elements</li>
             <li>Handle window
-            <ol>
-            <li>Open new window</li>
-            <li>Change it's size</li>
-            <li>Write data to it</li>
-            <li>Add an event listener that triggers window close</li>
-            </ol>
+                <ol>
+                    <li>Open new window</li>
+                    <li>Change it's size</li>
+                    <li>Write data to it</li>
+                    <li>Add an event listener that triggers window close</li>
+                </ol>
             </li>
             <li>Create the HTML (css if needed) and add three different event listeners to created HTML</li>
         </ol>
 
         <h4>1. Retrieve the domain name</h4>
         <p id="winLoc"></p>
-        <p>JS Window Location <a href="https://www.w3schools.com/js/js_window_location.asp" target="_blank" rel="noopener noreferrer">Link@W3</a></p>  
+        <p>JS Window Location <a href="https://www.w3schools.com/js/js_window_location.asp" target="_blank"
+                rel="noopener noreferrer">Link@W3</a></p>
         <ul>
             <li><code class="w3-codespan">window.location.href</code> returns the href (URL) of the current page</li>
             <li><code class="w3-codespan">window.location.hostname</code> returns the domain name of the web host</li>
-            <li><code class="w3-codespan">window.location.pathname</code> returns the path and filename of the current page</li>
-            <li><code class="w3-codespan">window.location.protocol</code> returns the web protocol used (http: or https:)</li>
+            <li><code class="w3-codespan">window.location.pathname</code> returns the path and filename of the current
+                page
+            </li>
+            <li><code class="w3-codespan">window.location.protocol</code> returns the web protocol used (http: or
+                https:)
+            </li>
             <li><code class="w3-codespan">window.location.assign()</code> loads a new document</li>
-          </ul>
-          <p class="intro">The <code class="w3-codespan">window.location</code> object can be used to get 
+        </ul>
+        <p class="intro">The <code class="w3-codespan">window.location</code> object can be used to get
             the current page address (URL) and to redirect the browser to a new page.</p>
 
         <h4>2. Save and then retrieve some data with localStorage</h4>
         <p id="locStor"></p>
-        <p>HTML Web Storage API <a href="https://www.w3schools.com/html/html5_webstorage.asp" target="_blank" rel="noopener noreferrer">Link@W3</a><br>
-        LocalStorage, sessionStorage <a href="https://javascript.info/localstorage" target="_blank" rel="noopener noreferrer">javascript.info</a>
+        <p>HTML Web Storage API <a href="https://www.w3schools.com/html/html5_webstorage.asp" target="_blank"
+                rel="noopener noreferrer">Link@W3</a><br>
+            LocalStorage, sessionStorage <a href="https://javascript.info/localstorage" target="_blank"
+                rel="noopener noreferrer">javascript.info</a>
         </p>
 
         <!-- <form action="/action_page.php">
@@ -59,35 +124,34 @@
         </form> -->
 
         <label for="textAr">Labled textarea field:</label><br>
-        <textarea
-        id="textAr"
-        class = "textAr"
-        name='textAr'
-        rows="3" cols="40" 
-        placeholder="write here"
-        ></textarea><br>
+        <textarea id="textAr" class="textAr" name='textAr' rows="3" cols="40" placeholder="write here"></textarea><br>
         Save data to local storage
         <button id="saveData">Save</button>
 
+    </main>
+    <footer>
+        <p>Use validator to check the code: <a target="_blank" href="https://validator.w3.org"> validator.w3.org
+            </a>
+        </p>
+    </footer>
+</body>
 
-    </body>
+<script>
+    // document.getElementById("winLoc").innerHTML = "The full URL of this page is:<br>" + window.location.href + "<br>" + window.location+ "<br>" + location;
+    // // document.getElementById("locStor").innerHTML =
+    // const nameInput = document.getElementsByClassName('textAr');
+    // console.log(nameInput.value);
+    const nameInput1 = document.getElementById('textAr').value;
+    // console.log(nameInput1.value);
+    // // console.log(nameInput1());
+    // console.log(nameInput1);
 
-    <script>
-        // document.getElementById("winLoc").innerHTML = "The full URL of this page is:<br>" + window.location.href + "<br>" + window.location+ "<br>" + location;
-        // // document.getElementById("locStor").innerHTML =
-        // const nameInput = document.getElementsByClassName('textAr');
-        // console.log(nameInput.value);
-        const nameInput1 = document.getElementById('textAr').value;
-        // console.log(nameInput1.value);
-        // // console.log(nameInput1());
-        // console.log(nameInput1);
+    document.getElementById("saveData").addEventListener("click", function () {
+        const nameInput = document.getElementsByClassName('taxtArr')[0];
+        // console.log('click');
+        // console.log(nameInput);
+        console.log(nameInput.value);
+    })
+</script>
 
-        document.getElementById("saveData").addEventListener("click", function() {
-            const nameInput = document.getElementsByClassName('taxtArr')[0];
-            // console.log('click');
-            // console.log(nameInput);
-            console.log(nameInput.value);
-
-
-    </script>
 </html>
