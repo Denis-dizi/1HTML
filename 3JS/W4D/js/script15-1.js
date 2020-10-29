@@ -2,23 +2,53 @@
 // 2020.10.19
 
 //Repeat W4D3
+//(0:02:) ; vs ,
+var test = 10, test1 = 11, test2 = 12;
+//(0:10:)
+var EdPuce = "Ed" + " " + "Puce";
 
+//(0:11:) built in prototype functions(?????):
+Array;
+Object;
+Math;
+Date;
+// Create your own prototype(?????):
+// User; - returns an Error: "User is not defined" if not defined.
+function User() {};
+User;
+
+function City() {};
+City;
+
+// (0:20:) arrow function
+var coolFn = () => {};
+var coolFn = function() {}; //- the same
+
+// (0:24:) built in prototype:
 let obj = {test: 1, test1: 2};
-Object.values(obj);
+Object.values(obj); // built in prototype is Object.
+console.log(Object.values(obj));
 
+new Date();
 
-// let.obj1 = Object.create({});
-// obj1;
-let arr = new Array();
-arr;
+let obj1 = Object.create({});
+obj1;
 
-function MyArray(...params) {
+let arr = new Array(1,2,3,4);
+console.log(arr);
+
+let arr3 = new Array([1,2,3,4],9,10,11);
+console.log(arr3);
+// (0:28:)
+function MyArray1(...params) {
     const arr = []
     params.forEach((val)=>{
         arr.push(val)
     })
     return arr;
 }
+let arr4 = new MyArray1(1,2,4,5)
+console.log(arr4);
 
 //Create your own prototype
 // function Food (name, price, amount) {
@@ -68,33 +98,33 @@ let win2 = window.open("", "", "");
 
 
 // = = =  Task = = = 
-const userNames = [];
-userNames.push("Ed");
-userNames.push("Jon");
-userNames.push("Jim");
-userNames.push("bill");
+// const userNames = [];
+// userNames.push("Ed");
+// userNames.push("Jon");
+// userNames.push("Jim");
+// userNames.push("bill");
 
-let win4 = window.open();
+// let win4 = window.open();
 
-userNames.forEach(function(value, index) {
-    win4.document.write("<h1>Element in array with" + index + " is " +value +"</h1>");
-})
+// userNames.forEach(function(value, index) {
+//     win4.document.write("<h1>Element in array with" + index + " is " +value +"</h1>");
+// })
 
-win4.document;
-win4.document.getElementsByTagName("h1");
-Object.values(win4.document.getElementsByTagName("h1"));
+// win4.document;
+// win4.document.getElementsByTagName("h1");
+// Object.values(win4.document.getElementsByTagName("h1"));
 
-win4.document.getElementsByTagName("h1").forEach();
+// win4.document.getElementsByTagName("h1").forEach();
 
-win4.document.getElementsByTagName("h1")[0].classList;
-win4.document.getElementsByTagName("h1")[0].classList.add("title");
-win4.document.getElementsByTagName("h1")[0].classList.remoove("title");
-win4.document.getElementsByTagName("h1")[0].classList.toggle("title");
-win4.document.getElementsByTagName("h1")[0].classList.toggle("cool");
-win4.document.getElementsByTagName("h1")[0].removeAttribute("class");
-win4.document.getElementsByTagName("h1")[0].setAttribute("what-a-cool-atribut", "test");
-win4.document.getElementById("first");
-win4.document.getElementById("first").classList.add("one", "two");
+// win4.document.getElementsByTagName("h1")[0].classList;
+// win4.document.getElementsByTagName("h1")[0].classList.add("title");
+// win4.document.getElementsByTagName("h1")[0].classList.remoove("title");
+// win4.document.getElementsByTagName("h1")[0].classList.toggle("title");
+// win4.document.getElementsByTagName("h1")[0].classList.toggle("cool");
+// win4.document.getElementsByTagName("h1")[0].removeAttribute("class");
+// win4.document.getElementsByTagName("h1")[0].setAttribute("what-a-cool-atribut", "test");
+// win4.document.getElementById("first");
+// win4.document.getElementById("first").classList.add("one", "two");
 
 
 //cookies vs localStorage
