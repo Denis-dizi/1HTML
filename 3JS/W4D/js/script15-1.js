@@ -172,6 +172,7 @@ function openWind1() {
 // // (1:19:)
 // win2.document.write('<h1 id="title">I\'m a title</h1>')
 // win2.document.write('<button id="title">I\'m a title</button>')
+// win2.document.write('<button id="closeBtn">Close window</button>')
 // // (1:21:)
 // win2.document.getElementById
 // win2.document.getElementsByTagName
@@ -185,15 +186,25 @@ function openWind1() {
 //     win2.console.log("clicked");
 //     win2.console.log(e);
 // })
-
-// let win3 = window.open();
-// win3.document.write("<button>Click me to close</button>")
-
-// win3.document.getElementsByTagName("button")[0].addEventListener("click", function(){
-//     win3.close();
+// // (1:30:)
+// win2.document.getElementById('closeBtn').addEventListener('click', function(e){
+//     win2.console.log("clicked close");
+//     win2.console.log(e);
+//     win2.close()
 // })
 
 
+// (1:31:)
+// let win3 = window.open();
+// win3.document.write("<button>Click me to close</button>")
+// win3.document.getElementsByTagName("button")[0].addEventListener("click", function(){
+//     win3.close();
+// })
+// win3.console.log(win3.document);
+// // console.log(win3.document);
+// win3.console.log(win3.document.getElementsByTagName("button"));
+
+// (1:37:)
 // = = =  Task = = = 
 // const userNames = [];
 // userNames.push("Ed");
