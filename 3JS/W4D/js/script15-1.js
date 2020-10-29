@@ -2,8 +2,11 @@
 // 2020.10.19
 
 //Repeat W4D3
+console.group('repeat W4D3. JS prototypes.')
 //(0:02:) ; vs ,
-var test = 10, test1 = 11, test2 = 12;
+var test = 10,
+    test1 = 11,
+    test2 = 12;
 //(0:10:)
 var EdPuce = "Ed" + " " + "Puce";
 
@@ -22,51 +25,113 @@ City;
 
 // (0:20:) arrow function
 var coolFn = () => {};
-var coolFn = function() {}; //- the same
+var coolFn = function () {}; //- the same
 
 // (0:24:) built in prototype:
-let obj = {test: 1, test1: 2};
+let obj = {
+    test: 1,
+    test1: 2
+};
 Object.values(obj); // built in prototype is Object.
 console.log(Object.values(obj));
 
-new Date();
+new Date(); //initialize prototype instance
 
 let obj1 = Object.create({});
 obj1;
 
-let arr = new Array(1,2,3,4);
-console.log(arr);
+let arr2 = new Array(1, 2, 3, 4);
+arr2;
+console.log('\t')
 
-let arr3 = new Array([1,2,3,4],9,10,11);
+console.log('arr6 = [5,7,8,\'a\']')
+arr6 = [5, 7, 8, 'a']
+console.log(arr6);
+console.log('\t')
+
+//built in prototype function
+let arr3 = new Array([1, 2, 3, 4], 9, 10, 11);
+console.log('let arr3 = new Array([1,2,3,4],9,10,11)');
+console.log(arr3.toString());
 console.log(arr3);
-// (0:28:)
+console.log('\t')
+
+// (0:28:) Create your own prototype
 function MyArray1(...params) {
     const arr = []
-    params.forEach((val)=>{
+    params.forEach((val) => {
         arr.push(val)
     })
     return arr;
 }
-let arr4 = new MyArray1(1,2,4,5)
+console.log(MyArray1.toString())
+console.log('let arr4 = new MyArray1(1, 2, 4, 5)')
+let arr4 = new MyArray1(1, 2, 4, 5)
 console.log(arr4);
+console.log('\t')
 
-//Create your own prototype
-// function Food (name, price, amount) {
-// }
+//(0:31:)
+let date = new Date(); // created instance
+date.getFullYear; // one of prototype functions. Returns full actual year
+date.getYear; // no longer recommended. year of the given date,... minus 1900
 
-function Food(nem, price, amount) {
+// = = = = = = = = = = = = = = = = = = = = = =
+//(0:35/39:) Create your own prototype
+console.log(' = = = = = = = = = = =');
+console.log('Create your own prototype.\n+++++Example with food:');
+function Food(name, price, amount) {
     this.name = name;
     this.price = price;
     this.amount = amount;
+
+    this.getTotalSum = function() {
+        console.log((this.price*this.amount)+" EUR")
+    }
+
+    this.getOneItemPrice = function() {
+        console.log("One "+name+" const "+price+" EUR")
+    }
 }
+console.log(Food.toString());
 
-
-let pizza = new Food ("pizza", 7, 3);
+console.log('let pizza = new Food("pizza", 7, 3);');
+let pizza = new Food("pizza", 7, 3); //create new instance
 // pizza.getTotalSum();
 
-let burger = new Food ("burger", 5, 30);
+let burger = new Food("burger", 5, 30); //create new instance
+console.log('let burger = new Food("burger", 5, 30);');
+console.log(`burger:`)
+console.log(burger)
+console.log('burger.getTotalSum()=');
+console.log(burger.getTotalSum()); // call a function from it
+console.log('burger.getOneItemPrice()=');
+console.log(burger.getOneItemPrice());
+//(0:40:)
+console.log('burger.amount>pizza.amount:')
+console.log(burger.amount>pizza.amount);
+console.log('(burger.price + pizza.price)*5 = ');
+console.log((burger.price + pizza.price)*5);
+console.log(' = = = = = = = = = = =');
+console.log('\t');
+// = = = = = = = = = = = = = = = = = = = = = =
+
+//(0:42:) JS Classes. Old, New (ES6) standarts
+
+function MyClass1(a, b){
+
+}
+
+class MyClass2 {
+    constructor(a, b){}
+}
+const test3 = new MyClass2(1, 2);
+console.log(' = = = = = = = = = = =');
+console.groupEnd();
+console.log('\t');
+// = = = = = = = = = = = = = = = = = = = = = =
 
 //DOM
+
 //(0:47:)
 
 //localStorage
@@ -74,7 +139,9 @@ let burger = new Food ("burger", 5, 30);
 
 //Window
 // (0:59)
-let win = window.open("", "test", {targe: "blank"})
+let win = window.open("", "test", {
+    targe: "blank"
+})
 // win.resizeTo(500, 500);
 
 
@@ -133,9 +200,15 @@ document.cookie = "nosaukums = vertiba";
 document.cookie;
 localStorage;
 localStorage.clear();
-localStorage.saraksts = {test: 1, test1: 2};
+localStorage.saraksts = {
+    test: 1,
+    test1: 2
+};
 localStorage.saraksts;
-localStorage.saraksts = JSON.stringify({test: 1, test1: 2});
+localStorage.saraksts = JSON.stringify({
+    test: 1,
+    test1: 2
+});
 localStorage.saraksts;
 JSON.parse(localStorage.saraksts);
 localStorage.users = [];
