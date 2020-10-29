@@ -79,17 +79,18 @@ date.getYear; // no longer recommended. year of the given date,... minus 1900
 //(0:35/39:) Create your own prototype
 console.log(' = = = = = = = = = = =');
 console.log('Create your own prototype.\n+++++Example with food:');
+
 function Food(name, price, amount) {
     this.name = name;
     this.price = price;
     this.amount = amount;
 
-    this.getTotalSum = function() {
-        console.log((this.price*this.amount)+" EUR")
+    this.getTotalSum = function () {
+        console.log((this.price * this.amount) + " EUR")
     }
 
-    this.getOneItemPrice = function() {
-        console.log("One "+name+" const "+price+" EUR")
+    this.getOneItemPrice = function () {
+        console.log("One " + name + " const " + price + " EUR")
     }
 }
 console.log(Food.toString());
@@ -108,21 +109,21 @@ console.log('burger.getOneItemPrice()=');
 console.log(burger.getOneItemPrice());
 //(0:40:)
 console.log('burger.amount>pizza.amount:')
-console.log(burger.amount>pizza.amount);
+console.log(burger.amount > pizza.amount);
 console.log('(burger.price + pizza.price)*5 = ');
-console.log((burger.price + pizza.price)*5);
+console.log((burger.price + pizza.price) * 5);
 console.log(' = = = = = = = = = = =');
 console.log('\t');
 // = = = = = = = = = = = = = = = = = = = = = =
 
 //(0:42:) JS Classes. Old, New (ES6) standarts
 
-function MyClass1(a, b){
+function MyClass1(a, b) {
 
 }
 
 class MyClass2 {
-    constructor(a, b){}
+    constructor(a, b) {}
 }
 const test3 = new MyClass2(1, 2);
 console.log(' = = = = = = = = = = =');
@@ -131,29 +132,58 @@ console.log('\t');
 // = = = = = = = = = = = = = = = = = = = = = =
 
 //DOM
-
+console.group('W5D1. DOM');
 //(0:47:)
+console.log('window.location:');
+console.log(window.location)
+console.log('window.location.href:');
+console.log(window.location.href)
+console.log('window.location.pathname:');
+console.log(window.location.pathname)
+//(0:52:)
+console.log('window.innerWidth/Height:');
+console.log(window.innerWidth);
+console.log(window.innerHeight);
 
-//localStorage
-// (0:54:)
+// (0:59) open and close window (New Tab):
+// let win5 = window.open();
+// console.log(win5);
+// win5.close();
 
-//Window
-// (0:59)
-let win = window.open("", "test", {
-    targe: "blank"
-})
-// win.resizeTo(500, 500);
+// open for 3sec after button pushing
+function openWind1() {
+    var myWindow = window.open("", "myWindow", "width=200, height=100");
+    myWindow.document.write("<p>This is 'myWindow'</p>");
+    setTimeout(function () {
+        myWindow.close()
+    }, 3000);
+}
+// (1:01:) open and close window (New separate Tab):
+// let win = window.open("", "test", {
+//     targe: "blank"
+// })
+// win.close();
+// console.log(win.document);
 
-
-let win2 = window.open("", "", "");
-// win2.document;
-
+// (1:17:)
+// let win2 = window.open("", "", "")
+// win2.document; // attiecas uz jauno atverto logu
+// document; // attiecas uz teko'so atverto logu
+// // (1:19:)
 // win2.document.write('<h1 id="title">I\'m a title</h1>')
-
+// win2.document.write('<button id="title">I\'m a title</button>')
+// // (1:21:)
 // win2.document.getElementById
+// win2.document.getElementsByTagName
 
-// [0].addEventListener('hover', function(e) {
-//     console.log(e);
+// // (1:24:)
+// win2.document.getElementsByTagName('h1')[0].addEventListener('mouseover', function (e) {
+//     win2.console.log('mouseovered');
+//     win2.console.log(e);
+// })
+// win2.document.getElementsByTagName('button')[0].addEventListener('click', function(e){
+//     win2.console.log("clicked");
+//     win2.console.log(e);
 // })
 
 // let win3 = window.open();
@@ -196,19 +226,19 @@ let win2 = window.open("", "", "");
 
 //cookies vs localStorage
 //(2:09:)
-document.cookie = "nosaukums = vertiba";
-document.cookie;
-localStorage;
-localStorage.clear();
-localStorage.saraksts = {
-    test: 1,
-    test1: 2
-};
-localStorage.saraksts;
-localStorage.saraksts = JSON.stringify({
-    test: 1,
-    test1: 2
-});
-localStorage.saraksts;
-JSON.parse(localStorage.saraksts);
-localStorage.users = [];
+// document.cookie = "nosaukums = vertiba";
+// document.cookie;
+// localStorage;
+// localStorage.clear();
+// localStorage.saraksts = {
+//     test: 1,
+//     test1: 2
+// };
+// localStorage.saraksts;
+// localStorage.saraksts = JSON.stringify({
+//     test: 1,
+//     test1: 2
+// });
+// localStorage.saraksts;
+// JSON.parse(localStorage.saraksts);
+// localStorage.users = [];
