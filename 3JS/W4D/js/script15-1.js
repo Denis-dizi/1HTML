@@ -144,9 +144,10 @@ console.log(window.location.pathname)
 console.log('window.innerWidth/Height:');
 console.log(window.innerWidth);
 console.log(window.innerHeight);
+console.log('\t');
 
 // (0:59) open and close window (New Tab):
-// let win5 = window.open();
+// let win5 = window.open(); // window.open(URL, name, specs, replace)
 // console.log(win5);
 // win5.close();
 
@@ -206,37 +207,88 @@ function openWind1() {
 
 // (1:37:)
 // = = =  Task = = = 
-// const userNames = [];
-// userNames.push("Ed");
-// userNames.push("Jon");
-// userNames.push("Jim");
-// userNames.push("bill");
 
-// let win4 = window.open();
+document.getElementById("win4").addEventListener("click", openWind4);
+function openWind4() {
+    const userNames = [];
+    userNames.push("Ed");
+    userNames.push("Jon");
+    userNames.push("Jim");
+    userNames.push("Bill");
+    userNames.push("Jack", "Grace", "Jane");
+    console.log(userNames);
 
-// userNames.forEach(function(value, index) {
-//     win4.document.write("<h1>Element in array with" + index + " is " +value +"</h1>");
-// })
+    // (1:41:)
+    let win4 = window.open();
+    // setTimeout(function () {
+    //     win4.close()
+    // }, 60*1000);
 
-// win4.document;
-// win4.document.getElementsByTagName("h1");
-// Object.values(win4.document.getElementsByTagName("h1"));
+    // let win4 = window.open("", "myWindow", "width=200, height=100");
+    setTimeout(function () {
+        win4.close()
+    }, 60 * 1000);
 
-// win4.document.getElementsByTagName("h1").forEach();
+    userNames.forEach(function (value, index) {
+        win4.document.write("<h1>Element in array with " + index + " is " + value + "</h1>");
+    })
+    win4.console.log('win4.document:');
+    win4.console.log(win4.document);
+    // (1:51:)
+    win4.console.log('win4.document.getElementsByTagName("h1"):');
+    win4.console.log(win4.document.getElementsByTagName("h1")); //HTMLCollection. Can't be aplied function forEach
+    win4.console.log('Object.values(win4.document.getElementsByTagName("h1")):');
+    win4.console.log(Object.values(win4.document.getElementsByTagName("h1"))); //Array
+    win4.console.log('\t');
 
-// win4.document.getElementsByTagName("h1")[0].classList;
-// win4.document.getElementsByTagName("h1")[0].classList.add("title");
-// win4.document.getElementsByTagName("h1")[0].classList.remoove("title");
-// win4.document.getElementsByTagName("h1")[0].classList.toggle("title");
-// win4.document.getElementsByTagName("h1")[0].classList.toggle("cool");
-// win4.document.getElementsByTagName("h1")[0].removeAttribute("class");
-// win4.document.getElementsByTagName("h1")[0].setAttribute("what-a-cool-atribut", "test");
-// win4.document.getElementById("first");
-// win4.document.getElementById("first").classList.add("one", "two");
+    // (1:52:) Add classes to ALL elements 'h1' // Object.values() - to read values to make an array.
+    Object.values(win4.document.getElementsByTagName("h1")).forEach(function (element) {
+        element.classList.add('title');
+    });
+    // (1:54:) Add classe to 1 element 'h1' ONLY
+    win4.document.getElementsByTagName("h1")[0].classList.add('font-large');
+    // (1:55:) remove the class from element:
+    win4.document.getElementsByTagName("h1")[1].classList.remove("title");
+    // (1:56:) toggle: remove if the class is set and add if class not set:
+    win4.document.getElementsByTagName("h1")[2].classList.toggle("title");
+    win4.document.getElementsByTagName("h1")[3].classList.toggle("cool");
+    win4.document.getElementsByTagName("h1")[4].classList.toggle("cooler");
+
+    //(1:57:) add 'cool' class and style?????????????????????
+    // element.style{
+    //     .cool{
+    //         color: red;
+    //     }
+    // }
+    // element.style.cool = `color: red`;
+    // element.style.cool.color = `red`;
+    // className = 'cool';
+    // let cool = win4.document.getElementsByClassName('cool');
+    // cool.style.color = "red";
+    // win4.document.getElementsByClassName('cool').style.color="red";
+
+    // https://stackoverflow.com/questions/42942002/set-style-using-pure-javascript
+    win4.document.getElementsByClassName('cool')[0].style.color = "red";
+    // https://gomakethings.com/two-ways-to-set-an-elements-css-with-vanilla-javascript/
+    //++++ gomakethings.com
+    let elem = win4.document.getElementsByClassName('cooler')[0];
+    elem.style.color = 'green';
+
+    //(1:58:)
+    win4.document.getElementsByTagName("h1")[5].removeAttribute("class");
+    win4.document.getElementsByTagName("h1")[6].setAttribute("id", "tst1");
+    win4.document.getElementsByTagName("h1")[6].setAttribute("cool-atribut", "tst2");
+    win4.console.log('win4.document.getElementById("tst1"):');
+    win4.console.log(win4.document.getElementById("tst1"));
+    win4.console.log('win4.document.getElementById("tst1").classList:');
+    win4.console.log(win4.document.getElementById("tst1").classList);
+    // (2:02:) add some classes at once
+    win4.document.getElementById("tst1").classList.add("one", "two");
+}
 
 
 //cookies vs localStorage
-//(2:09:)
+//(2:11:)
 // document.cookie = "nosaukums = vertiba";
 // document.cookie;
 // localStorage;
