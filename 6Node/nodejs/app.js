@@ -39,3 +39,6 @@ app.listen(8002, () => {
     console.log('Fine!! Server is up on localhost on http://localhost:8002') //not a browsers console
     //run in terminal: node app.js
 })
+
+// (1:42:)W10D2
+exports.db = db;
