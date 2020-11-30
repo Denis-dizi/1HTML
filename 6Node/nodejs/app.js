@@ -1,20 +1,23 @@
 // (:23:)W10D2
-const {
-    response
-} = require('express');
-const express = require('express');
+const express = require('express'); // (:24:)W10D2
 const mysql = require('mysql');
-
-const app = new express();
+const cors = require('cors'); //(1:27:)W10D2
+const userRoutes = require('./routes/user.route') // (1:10:)W10D2
+const app = new express(); // (0:27:)W10D2
+app.use(cors());
 const router = express.Router();
 
+// (:31:)W10D2
 router.get('', (reject, response) => {
     console.log("Response was sent to the browser.")
     response.send("Requested route does not exist.");
 });
 
+// "localhost:8002/users/add" // (1:11:)W10D2
+app.use('/users', userRoutes); //(1:06/11:)
 app.use('*', router);
 
+// (:47:)W10D2
 const db = mysql.createConnection({
     host: 'localhost',
     port: '3306',
@@ -23,6 +26,7 @@ const db = mysql.createConnection({
     database: 'shop-i' //xampp must be started
 })
 
+// (:48:)W10D2
 db.connect((error) => {
     if (error) {
         throw error
@@ -30,6 +34,7 @@ db.connect((error) => {
     console.log("Connected to database");
 })
 
+// (0:27:)W10D2
 app.listen(8002, () => {
     console.log('Fine!! Server is up on localhost on http://localhost:8002') //not a browsers console
     //run in terminal: node app.js
