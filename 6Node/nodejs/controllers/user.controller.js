@@ -7,8 +7,11 @@ const app = require('../app');
 // (1:36:)W10D2
 // const add = (request, response) => {
 exports.add = (request, response) => {
-    const username = "";
-    const password = "";
+    // (2:03:)W10D2
+    // console.log(request);
+    const data = request.body;
+    const username = data.username;
+    const password = data.password;
 
     const sql = `INSERT INTO users (email, password) VALUES("${username}", "${password}")`
 

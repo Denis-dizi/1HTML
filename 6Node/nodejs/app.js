@@ -2,9 +2,14 @@
 const express = require('express'); // (:24:)W10D2
 const mysql = require('mysql');
 const cors = require('cors'); //(1:27:)W10D2
+const bodyParser = require('body-parser'); //(2:13:)W10D2
 const userRoutes = require('./routes/user.route') // (1:10:)W10D2
+
 const app = new express(); // (0:27:)W10D2
 app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true})); //(2:15:)W10D2
+
 const router = express.Router();
 
 // (:31:)W10D2
