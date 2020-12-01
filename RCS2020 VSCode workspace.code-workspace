@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "..\\..\\..\\xampp\\htdocs\\web"
+		},
+		{
+			"path": "..\\..\\..\\xampp\\htdocs\\VueReact"
 		}
 	],
 	"settings": {}
