@@ -1,0 +1,70 @@
+/* (2:20:)W10D3 */
+.rot {
+    width: 60px;
+    height: 60px;
+    padding: 30px;
+
+    transition-property: transform;
+    transition-duration: 0.8s;
+}
+
+#rotSpan {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: red;
+}
+
+.rot:hover {
+    transform: rotate(360deg);
+}
+
+/* (2:28:)W10D3 */
+#slide {
+    padding-left: 12px;
+    width: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    transition: width 0.5s ease-in;
+}
+
+#slide:hover {
+    width: 300px;
+}
+
+/* (2:34:)W10D3 */
+.anime {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background: green;
+}
+
+.animeSpan {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: move 4s infinite;
+}
+
+@keyframes move {
+    25% {
+        left: calc(100% - 30px);
+        top: 0;
+    }
+    50% {
+        left: calc(100% - 30px);
+        top: calc(100% - 30px);
+    }
+    75% {
+        left: 0;
+        top: calc(100% - 30px);
+    }
+}
