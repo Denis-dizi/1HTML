@@ -1,19 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "..\\..\\..\\xampp\\htdocs\\PHP2020_RCS"
-		},
-		{
-			"path": "..\\..\\..\\xampp\\htdocs\\web"
-		},
-		{
-			"path": "..\\..\\..\\xampp\\htdocs\\VueReact"
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "RCS2020"
-	}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
